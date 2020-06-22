@@ -58,6 +58,7 @@ This content is a brief way to learn and review some basic and expert commands t
  
 * less: Show just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
     - less filename1.txt filename2.txt
+
 * more: Old way to see the content of a file
  - more filename.txt 
  
@@ -77,11 +78,11 @@ This content is a brief way to learn and review some basic and expert commands t
     -l => Print only the name of files that contain matches but not the matches. 
     -n => Print line numbers. 
     -v => Only the lines that don't match.
-    - grep -v word path/filename.csv - Print line that don't match
+    - grep -v word path/filename.csv - Print line that don't match.
     - grep -n -v word path/filename.csv - Print line that don't match and the number of the line.
     - grep i word path/filename1.csv path/filename2.csv - Print the count of matching lines.
  
-* mkdir - Create a directory
+* mkdir - Create a directory.
      - mkdir name
 
 * wc: *word count* - Count number of characters, words and line in a file and uses -c, -w and -l. 
@@ -89,35 +90,74 @@ This content is a brief way to learn and review some basic and expert commands t
 
 * sort: 
    - sort filename.csv - Ascending alphabetical order.
-   - sort -n filename.csv - Numerically order
-   - sort -n -r filename.csv - Using -r flag reverse order
-   - sort -b -n filename.csv - Ignore branks
+   - sort -n filename.csv - Numerically order.
+   - sort -n -r filename.csv - Using -r flag reverse order.
+   - sort -b -n filename.csv - Ignore branks.
    
 * uniq: Remove adjacent duplicates. To be like group by of any language has to sort the data before.
-   - uniq -c filename.csv - Groupby unique and count of duplicates
+   - uniq -c filename.csv - Groupby unique and count of duplicates.
    
 #### Flags
 
 * -n : Number of lines.
-* -R : Recursive
+* -R : Recursive.
 * -F : Print / after all directories and * after runnable programms.
 * -e : Print the end of a file.
-* -f : Columns from a text file
+* -f : Columns from a text file.
 * -d : Separator - ','` ` ';'` ` ':'
 
 ###### It is possible to combine flags.
 
-#Output command in a file
+# Output command in a file
 
-##By using the shell comands it is possible to export to a new file:
+## By using the shell comands it is possible to export to a new file:
 
-* > : Export to a csv file
-      - head -n 5 filename.csv > newfilename.csv - Exports the first five rows to a newfilename.csv.
-      - > newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
+* `>` - Export to a csv file.
+   - head -n 5 filename.csv > newfilename.csv - Exports the first five rows to a newfilename.csv.
+   - `>` newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv.
+
 ## Combine commands using pipe
 
- * | - Pipe symbol inform the shell to use the left output as input
-     - head filename.csv | tail -n 1
+ * | - Pipe symbol inform the shell to use the left output as input.
+   - head filename.csv | tail -n 1
+
+# Print variable's value
+
+## echo  
+### Easy way to print a value or a variable's value and the character $ is used do access the variable.
+   - echo $OSTYPE - Prints the variable's value.
+   - echo Hello - Prints "Hello".
+   - var=filename.csv - echo testing shows the velue of var. Can't have any space next to `=`.
+   - head -n 3 $var - Access the filename.csv using the variable var.
+   
+## Loop
+
+### The structure is:
+
+> for file in file1 file2 file3; do echo $file; done 
+
+- Using ; it is possible write the loop in line.
+
+or 
+
+> for file in file1 file2 file3 \
+> do \
+>   echo $file \
+> done \
+
+> for file in path/*.csv \
+> do \
+>   
+    echo $file
+    grep word &file| head -n 3| tail -n 1 \
+> done 
+
+* Inside of the block after *do* is possible run commands learned before, like head, cut, grep and others. So is possible to do one manipulation by file or merge all files and after do what is necessary. 
+
+* Space in the name of the file causes probleblems.
+
+
+   
 
 
 
