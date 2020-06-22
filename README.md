@@ -73,10 +73,13 @@ This content is a brief way to learn and review some basic and expert commands t
     -l => Print only the name of files that contain matches but not the matches. 
     -n => Print line numbers. 
     -v => Only the lines that don't match.
+    - grep -v word path/filename.csv - Print line that don't match
+    - grep -n -v word path/filename.csv - Print line that don't match and the number of the line.
+    - grep i word path/filename1.csv path/filename2.csv - Print the count of matching lines.
  
 * history: Print a list of comands used recently
- - !comand - It will run the recent use of the comand.
- - !2 - It will run te second comand from history. It is !number.
+    - !comand - It will run the recent use of the comand.
+    - !2 - It will run te second comand from history. It is !number.
  
 * mkdir - Create a directory
     - mkdir name
