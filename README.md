@@ -67,8 +67,12 @@ This content is a brief way to learn and review some basic and expert commands t
     - cut -f 2-5,8 -d , filename.csv - Shows columns 2 to 5 and 8. The flag -d show comma separator
     
 * grep: *general regular expression parser* - Select lines that contains a text
-    - Common flags:
-        *
+    - Common flags: -c => Print a count of the matching lines. 
+    -h => It don´t print the name of files. 
+    -i => Not case sensitive. 
+    -l => Print only the name of files that contain matches but not the matches. 
+    -n => Print line numbers. 
+    -v => Only the lines that don't match.
  
 * history: Print a list of comands used recently
  - !comand - It will run the recent use of the comand.
