@@ -9,8 +9,8 @@ This content is a brief way to learn and review some basic and expert commands t
 
 ## Commands
 
-* man: Commands manual
- - man comandname: Shows comandname's manual
+* man    : Commands manual
+   - man comandname: Shows comandname's manual
 
 * pwd   : *print working directory* - Shows where you are in the filesystem.
 
