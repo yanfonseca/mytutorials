@@ -4,16 +4,16 @@ This content is a brief way to learn and review some basic and expert commands t
 
 ## Special characters
 * ..    : The directory above the one you are.
-* .     : Current directory
-* ~     : Home directory // COMO ALTERAR O HOME DIRECTORY?
+* .     : Current directory.
+* ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? ###########################################################
 
 ## Wildcards: 
-* * - Match zero or more words or characters
-* ? - match a single caracter
-* [] - Match any one caracter inside square brackets
-   - [0123] - Match to 0, 1 or 3.
-* {} - Match any of the patterns comma-separeted
-   - {*.csv, *.txt} - Matches to files ended by specification
+* * - Matches zero or more words or characters.
+* ? - Matches a single character.
+* [] - Matches any one character inside square brackets.
+   - [0123] - Matches to 0, 1 or 3.
+* {} - Matches any of the patterns comma-separeted
+   - {*.csv, *.txt} - Matches to files ended by the specification.
 
 ## Commands
 
@@ -109,15 +109,16 @@ This content is a brief way to learn and review some basic and expert commands t
 
 #Output command in a file
 
-By using the shell comands it is possible to export to a new file:
+##By using the shell comands it is possible to export to a new file:
 
 * > : Export to a csv file
       - head -n 5 filename.csv > newfilename.csv - Exports the first five rows to a newfilename.csv.
-     
-# Combine commands using pipe
+      - > newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
+## Combine commands using pipe
 
  * | - Pipe symbol inform the shell to use the left output as input
      - head filename.csv | tail -n 1
+
 
 
 
