@@ -7,17 +7,6 @@ This content is a brief way to learn and review some basic and expert commands t
 * .     : Current directory
 * ~     : Home directory // COMO ALTERAR O HOME DIRECTORY?
 
-## Flags
-
-* -n : Number of lines.
-* -R : Recursive
-* -F : Print / after all directories and * after runnable programms.
-* -e : Print the end of a file.
-* -f : Columns from a text file
-* -d : Separator - ','` ` ';'` ` ':'
-
-#### It is possible to combine flags.
-
 ## Commands
 
 * man: Commands manual
@@ -82,6 +71,18 @@ This content is a brief way to learn and review some basic and expert commands t
     - !2 - It will run te second comand from history. It is !number.
  
 * mkdir - Create a directory
-    - mkdir name
+- mkdir name
+
+#### Flags
+
+* -n : Number of lines.
+* -R : Recursive
+* -F : Print / after all directories and * after runnable programms.
+* -e : Print the end of a file.
+* -f : Columns from a text file
+* -d : Separator - ','` ` ';'` ` ':'
+
+###### It is possible to combine flags.
+
 
 # Pipe |
