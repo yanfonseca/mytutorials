@@ -7,7 +7,21 @@ This content is a brief way to learn and review some basic and expert commands t
 * .     : Current directory
 * ~     : Home directory // COMO ALTERAR O HOME DIRECTORY?
 
+## Flags
+
+* -n : Number of lines.
+* -R : Recursive
+* -F : Print / after all directories and * after runnable programms.
+* -e : Print the end of a file.
+* -f : Columns from a text file
+* -d : Separator - ','` ` ';'` ` ':'
+
+#### It is possible to combine flags.
+
 ## Commands
+
+* man: Commands manual
+ - man comandname: Shows comandname's manual
 
 * pwd   : *print working directory* - Shows where you are in the filesystem.
 
@@ -47,5 +61,20 @@ This content is a brief way to learn and review some basic and expert commands t
     - head filename.txt - First 10 lines.
     - head -n 2 filename.txt - First two lines.
  
+ * tail: Show the last 10 lines and it is the opposite of head command.
+ 
+ * cut: Select columns from a text file.
+    - cut -f 2-5,8 -d , filename.csv - Shows columns 2 to 5 and 8. The flag -d show comma separator
+    
+* grep: *general regular expression parser* - Select lines that contains a text
+    - Common flags:
+        *
+ 
+* history: Print a list of comands used recently
+ - !comand - It will run the recent use of the comand.
+ - !2 - It will run te second comand from history. It is !number.
+ 
 * mkdir - Create a directory
     - mkdir name
+
+# Pipe |
