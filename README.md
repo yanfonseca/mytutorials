@@ -8,7 +8,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? ###########################################################
 
 ## Wildcards: 
-* * - Matches zero or more words or characters.
+* `*` - Matches zero or more words or characters.
 * ? - Matches a single character.
 * [] - Matches any one character inside square brackets.
    - [0123] - Matches to 0, 1 or 3.
@@ -17,10 +17,10 @@ This content is a brief way to learn and review some basic and expert commands t
 
 ## Commands
 
-* man    : Commands manual
+* man    : To access the manual's command.
    - man comandname: Shows comandname's manual
 
-* pwd   : *print working directory* - Shows where you are in the filesystem.
+* pwd   : *Print working directory* - Shows where you are in the filesystem.
 
 * history: Print a list of comands used recently
     - !comand - It will run the recent use of the comand.
