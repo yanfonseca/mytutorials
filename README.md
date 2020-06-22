@@ -7,12 +7,24 @@ This content is a brief way to learn and review some basic and expert commands t
 * .     : Current directory
 * ~     : Home directory // COMO ALTERAR O HOME DIRECTORY?
 
+## Wildcards: 
+* * - Match zero or more words or characters
+* ? - match a single caracter
+* [] - Match any one caracter inside square brackets
+   - [0123] - Match to 0, 1 or 3.
+* {} - Match any of the patterns comma-separeted
+   - {*.csv, *.txt} - Matches to files ended by specification
+
 ## Commands
 
 * man    : Commands manual
    - man comandname: Shows comandname's manual
 
 * pwd   : *print working directory* - Shows where you are in the filesystem.
+
+* history: Print a list of comands used recently
+    - !comand - It will run the recent use of the comand.
+    - !2 - It will run te second comand from history. It is !number.
 
 * ls    : *listing* - Lists the contents of your current directory. 
     - ls .    : The contentes of the current directory
@@ -41,6 +53,9 @@ This content is a brief way to learn and review some basic and expert commands t
   - cat *.csv >> filename.csv - Concatente and append to a filename.csv.
   - cat -e filename.csv - Go to the end of a file
   
+* paste: Join files horizontally.
+ - paste filename1.csv filename.csv
+ 
 * less: Show just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
     - less filename1.txt filename2.txt
 * more: Old way to see the content of a file
@@ -54,7 +69,7 @@ This content is a brief way to learn and review some basic and expert commands t
  
  * cut: Select columns from a text file.
     - cut -f 2-5,8 -d , filename.csv - Shows columns 2 to 5 and 8. The flag -d show comma separator
-    
+
 * grep: *general regular expression parser* - Select lines that contains a text
     - Common flags: -c => Print a count of the matching lines. 
     -h => It don´t print the name of files. 
@@ -66,13 +81,21 @@ This content is a brief way to learn and review some basic and expert commands t
     - grep -n -v word path/filename.csv - Print line that don't match and the number of the line.
     - grep i word path/filename1.csv path/filename2.csv - Print the count of matching lines.
  
-* history: Print a list of comands used recently
-    - !comand - It will run the recent use of the comand.
-    - !2 - It will run te second comand from history. It is !number.
- 
 * mkdir - Create a directory
-- mkdir name
+     - mkdir name
 
+* wc: *word count* - Count number of characters, words and line in a file and uses -c, -w and -l. 
+      - grep word filename.csv : wc -l - Prints the number os lines that word seached shows.
+
+* sort: 
+   - sort filename.csv - Ascending alphabetical order.
+   - sort -n filename.csv - Numerically order
+   - sort -n -r filename.csv - Using -r flag reverse order
+   - sort -b -n filename.csv - Ignore branks
+   
+* uniq: Remove adjacent duplicates. To be like group by of any language has to sort the data before.
+   - uniq -c filename.csv - Groupby unique and count of duplicates
+   
 #### Flags
 
 * -n : Number of lines.
@@ -84,5 +107,17 @@ This content is a brief way to learn and review some basic and expert commands t
 
 ###### It is possible to combine flags.
 
+#Output command in a file
 
-# Pipe |
+By using the shell comands it is possible to export to a new file:
+
+* > : Export to a csv file
+      - head -n 5 filename.csv > newfilename.csv - Exports the first five rows to a newfilename.csv.
+     
+# Combine commands using pipe
+
+ * | - Pipe symbol inform the shell to use the left output as input
+     - head filename.csv | tail -n 1
+
+
+
