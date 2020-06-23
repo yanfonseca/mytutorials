@@ -3,7 +3,8 @@
 This content is a brief way to learn and review some basic and expert commands to make your daily data manipulation easier and productive.
 
 ## Cheking installation
-- which command
+- which command or stack
+- command -v or command --version
 
 ## Special characters
 * ..    : The directory above the one you are.
@@ -32,7 +33,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * ls    : *listing* - Lists the contents of your current directory. 
     - ls .    : The contentes of the current directory
     - ls path/   : Lists the contents of path.
-    - ls -R:
+    - ls -R - F:
 * mv    : *move* - Move a file or directory from a directory to another one.
     - mv path1/filename1.csv path2/filename2.csv    - Change the name of a file. 
     - mv path/filename1.csv path/filename2.csv path2 - Move files to a new path. 
@@ -99,6 +100,9 @@ This content is a brief way to learn and review some basic and expert commands t
    
 * uniq: Remove adjacent duplicates. To be like group by of any language has to sort the data before
    - uniq -c filename.csv - Groupby unique and count of duplicates
+   
+* sed:
+
    
 #### Flags
 
@@ -213,3 +217,44 @@ or
    - wget -i url_list.txt
    - wget --limit-rate=300k -i url_list.txt - Limit of download is 300k
    - wget --wait=3.5 -i url_list.txt - 3.5 segundos between file download.
+
+* Others
+   - unzip filename.zip
+   - unzip filename.zip && rm filename.zip - Unzip and delete file.
+
+# Pip
+
+## Some observation about pip
+
+- pip install -r requirements.txt - requirements is a list of packages
+- pip install package1 package2
+
+# Automation with Cron
+
+* Cron
+   - crontab -l - Verify if exits some cron job.
+   - echo " * * * * * python filename.py" | crontab 
+   - `* * * * *` - minute, hour, day of month, month, day of week
+   
+# Script anatomy
+
+* Begins with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash
+   - bash script.sh - To run.
+   - ./script.sh - If shebang  mentioned in the first line.
+   - $@ or $* all arguments
+   - $# lenght of arguments
+   - var="text" 
+   - echo $var. Print text.
+   - '' interprets literally and "" interprets literaly except using $var , `var` , $(var) inside the ""
+   - expr 1 + 4 it will be 5.
+   - echo "5 + 7.5" | bc . The program bc makes possible run 
+
+* Array in Bash
+- index start at 0
+-  declare -a array
+- array=(30 40 50) without comma
+- echo ${arra[@]} Returns all.
+- echo ${#array[@]} Array's length
+
+* Associative array
+   
