@@ -265,10 +265,6 @@ done
    - expr 1 + 4 -  It will be 5.
    - echo "5 + 7.5" | bc . The program bc makes possible to run. 
 
-* Loop For, While and Case
-
-* Functions
-
 * Array in Bash - index start at 0.
 
    - declare -a array
@@ -277,4 +273,9 @@ done
    - echo ${#array[@]} - Array's length
 
 * Associative array
-   
+  
+* Loop For, While and Case
+
+* If statements
+
+* Functions
