@@ -10,7 +10,9 @@ This content is a brief way to learn and review some basic and expert commands t
 ## Special characters
 * ..    : The directory above the one you are.
 * .     : Current directory.
-* ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? ###########################################################
+
+#UPDATE HERE
+* ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? 
 
 ## Wildcards: 
 * `*` : It matches zero or more words or characters.
@@ -80,7 +82,7 @@ This content is a brief way to learn and review some basic and expert commands t
  * cut: It selects columns from a text file.
     - cut -f 2-5,8 -d , filename.csv - Columns 2 to 5 and 8. The flag -d shows the comma separator.
 
-* grep: *general regular expression parser* - It selects lines that contains a text.
+* grep: *general regular expression parser* - It selects lines that contains a text. It accepts REGEX.
     - Common flags: 
     > -c => Print a count of the matching lines. 
     -h => It don´t print the name of files. 
@@ -92,6 +94,7 @@ This content is a brief way to learn and review some basic and expert commands t
     - grep -v word path/filename.csv - It prints line that don't match.
     - grep -n -v word path/filename.csv - It prints lines that don't match and the numbers of the lines.
     - grep i word path/filename1.csv path/filename2.csv - With not sensitive case.
+    - grep '[pc]' filename.txt - REGEX
  
 * wc: *word count* - It counts the numbers of characters, words and lines in a file and uses -c, -w and -l.
       - grep word filename.csv : wc -l - It prints the number of the lines that word seached is find.
@@ -104,8 +107,10 @@ This content is a brief way to learn and review some basic and expert commands t
    
 * uniq: Remove adjacent duplicates. It is like group by of any language but it has to sort the data before run this command.
    - uniq -c filename.csv - Group by unique and count of duplicates
-   
-* sed:
+   - sort | uniq -c
+
+#UPDATE HERE
+* sed: 
 
 * mkdir - Create a directory
      - mkdir name
@@ -143,7 +148,49 @@ This content is a brief way to learn and review some basic and expert commands t
    - echo Hello - It prints "Hello".
    - var=filename.csv - It can't have any space next to `=`.
    - head -n 3 $var - Access the filename.csv using the variable var.
+
+```
+var_1='Hello'
+var_2='Good'
+echo "It is:" $var_1 $var_2
+```
+
+* Shell-within-a-shell - Using command date. 
+   - var="The date is `date` - It is possible to chall commands with backticks(` `)
+   - var="The date is $(date)"
    
+* It can begin with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash.
+
+   - bash script.sh - To run.
+   - ./script.sh - If shebang is mentioned in the first line.
+   - $@ or $* - For all arguments.
+   - $# - Lenght of arguments.
+   - expr 1 + 4 -  It will be 5.
+   - echo "5 + 7.5" | bc . The program bc makes possible to run. 
+   - echo "scale=2; 5 /3 " | bc
+   
+* Double bracket notation
+
+```
+expr 2 + 3
+echo $((3 + 3))
+
+5
+5
+```
+```
+num1=10
+num2=20
+echo "the value is $(echo "($num1 + $num2) / 2" | bc)"
+```
+
+```
+num1=10
+num2=20
+value=echo "($num1 + $num2) / 2" | bc
+echo "the value is $(value)"
+```
+
 ## Run commands later
 
 * Sabe the commands learned before inside a script ended by .sh using some editor and run it.
@@ -217,18 +264,6 @@ This content is a brief way to learn and review some basic and expert commands t
   
 # Script anatomy
 
-* It can begin with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash.
-
-   - bash script.sh - To run.
-   - ./script.sh - If shebang is mentioned in the first line.
-   - $@ or $* - For all arguments.
-   - $# - Lenght of arguments.
-   - var="text" 
-   - echo $var. Print text.
-   - '' interprets literally and "" interprets literally except using $var , `var` , $(var) inside the ""
-   - expr 1 + 4 -  It will be 5.
-   - echo "5 + 7.5" | bc . The program bc makes possible to run. 
-
 * Array in Bash - index start at 0.
 
    - declare -a array
@@ -272,8 +307,39 @@ done
    - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
    - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
 
+#UPDATE HERE
 ## Associative array
 
 ## If statements
 
+```
+if [ condition ]; then
+   #code
+else
+   #code
+fi
+```
+
+* Using AND and OR - To use inside the if.
+
+- AND = &&
+- OR = ||
+
+```
+if grep -q 'teste' text.txt; then
+   echo "teste inside"
+
+fi
+```
+
 ## Functions
+
+* The variables are global, it is the default mode. To be local add "local" before de var
+   - local var="text"
+   - local var=$1
+
+```
+function function_name{
+   return
+}
+```
