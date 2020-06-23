@@ -200,14 +200,14 @@ This content is a brief way to learn and review some basic and expert commands t
    - unzip filename.zip
    - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
 
-# Pip
+## Pip
 
-## Some observation about pip
+### Some observation about pip
 
 - pip install -r requirements.txt - requirements is a list of packages.
 - pip install package1 package2.
 
-# Automation with Cron
+## Automation with Cron
 
 * Cron
 
