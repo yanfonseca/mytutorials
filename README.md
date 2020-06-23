@@ -272,8 +272,8 @@ done
    - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
    - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
 
-* Associative array
+## Associative array
 
-* If statements
+## If statements
 
-* Functions
+## Functions
