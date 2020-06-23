@@ -141,22 +141,38 @@ This content is a brief way to learn and review some basic and expert commands t
 or 
 
 > for file in file1 file2 file3 \
-> do \
->   echo $file \
+ do \
+   echo $file \
 > done \
 
 > for file in path/*.csv \
-> do \
->   
+ do \
+   
     echo $file
     grep word &file| head -n 3| tail -n 1 \
 > done 
 
 * Inside of the block after *do* is possible run commands learned before, like head, cut, grep and others. So is possible to do one manipulation by file or merge all files and after do what is necessary. 
 
-* Space in the name of the file causes probleblems.
+* Space in the name of the file causes problems.
+   - For exemple: head'file name.csv'
+   - If it is write: head file name.csv it will be a problem.
 
+## Run commands later
 
+* Just save the comands learned before inside a script .sh using some editor and run.
+   - bash scripname.sh - It will do what is inside the script, can be manipulations or other things.
+
+### Pass filenames to scripts
+
+* Using dollar sign followed by at-sign and means all command-line arguments are given to script.
+  - head -n 2 $@ | wc -l -c insite of script scriptname.sh
+  - bash scriptname.sh filename1.csv filename2.csv filename3.csv
+
+* Process a single argument using $1, $2 to command-line parameters. It is possible pass n number of arguments and the first one it will be filename.
+   - Write cut -d, -f $2 $1 inside the file.sh
+   - bash file.sh filename.csv number_columns - $1 is number_columns and $2 is the file.
+   - The shell waits forevers for the argument.
    
 
 
