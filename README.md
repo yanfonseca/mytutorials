@@ -144,42 +144,6 @@ This content is a brief way to learn and review some basic and expert commands t
    - var=filename.csv - It can't have any space next to `=`.
    - head -n 3 $var - Access the filename.csv using the variable var.
    
-## Loop
-
-### The structure is:
-
-* 1 
-   - It is possible write the loop in line using (;).
-
-```
- for file in file1 file2 file3; do echo $file; done 
-```
-
-* 2
-
-```
-for file in file1 file2 file3 
-do 
-    echo $file 
-done 
-```
-
-* 3
-
-```
-for file in path/*.csv
-do 
-   echo $file
-   grep word $file| head -n 3| tail -n 1 
-done 
-```
-
-* Inside of the block and after *do* is possible to run commands learned before, like: head, cut, grep and others. It is possible to do one manipulation by file or merge all files and after do what is necessary
-
-* Space in the name of the file causes problems
-   - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
-   - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
-
 ## Run commands later
 
 * Sabe the commands learned before inside a script ended by .sh using some editor and run it.
@@ -271,10 +235,44 @@ done
    - array=(30 40 50) -  Without comma.
    - echo ${arra[@]} - Returns all.
    - echo ${#array[@]} - Array's length
+  
+## Loop
+
+### The structure is:
+
+* 1 
+   - It is possible write the loop in line using (;).
+
+```
+ for file in file1 file2 file3; do echo $file; done 
+```
+
+* 2
+
+```
+for file in file1 file2 file3 
+do 
+    echo $file 
+done 
+```
+
+* 3
+
+```
+for file in path/*.csv
+do 
+   echo $file
+   grep word $file| head -n 3| tail -n 1 
+done 
+```
+
+* Inside of the block and after *do* is possible to run commands learned before, like: head, cut, grep and others. It is possible to do one manipulation by file or merge all files and after do what is necessary
+
+* Space in the name of the file causes problems
+   - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
+   - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
 
 * Associative array
-  
-* Loop For, While and Case
 
 * If statements
 
