@@ -1,17 +1,15 @@
 # Introduction to Shell
 
-This content is a brief way to learn and review some basic and expert commands to make your daily data manipulation easier and productive.
+This content is a brief way to learn and review some basic and expert commands to make my and your daily data manipulation easier and productive. 
 
-## Cheking installation
+### Cheking installation
 * which - Used with a program. 
    - which bash. It prints where bash is installed.
    - program -v or program --version. It prints the program's version.
 
-## Special characters
+### Special characters
 * ..    : The directory above the one you are.
 * .     : Current directory.
-
-#UPDATE HERE
 * ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? 
 
 ## Wildcards: 
@@ -22,7 +20,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * { } : It matches any of the patterns comma-separeted.
    - {*.csv, *.txt} - Matches to files ended by the specification.
 
-## Commands
+# Commands
 
 * man    : To access the manual's command.
    - man commandname/program: It hows comandname's manual.
@@ -109,15 +107,15 @@ This content is a brief way to learn and review some basic and expert commands t
    - uniq -c filename.csv - Group by unique and count of duplicates
    - sort | uniq -c
 
-#UPDATE HERE
+#do an UPDATE HERE
 * sed: 
 
 * mkdir - Create a directory
      - mkdir name
    
-#### Flags
+### Flags
 
-##### Commands share the same flags and it is possible to combine flags.
+#### Commands share the flags and it is possible to combine flags.
 
 * -n : Number of lines
 * -R : Recursive
@@ -128,20 +126,20 @@ This content is a brief way to learn and review some basic and expert commands t
 
 # Output command in a file
 
-## By using the shell commands it is possible to export to a new file:
+### By using the shell commands it is possible to export to a new file:
 
 * `>` - it exports to a csv file.
    - head -n 5 filename.csv > newfilename.csv - It exports the first five rows to a newfilename.csv
    - `>` newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
 
-## Combine commands using pipe
+### Combine commands using pipe
 
  * | - The pipe symbol informs the shell to use the left output as input.
    - head filename.csv | tail -n 1
 
-# Print variable's value
+## Print variable's value
 
-## echo
+### echo
 
 * It prints a value or a variable's value. The character $ is used do access the variable.
    - echo $OSTYPE - It prints the variable's value.
@@ -247,14 +245,14 @@ echo "the value is $(value)"
    - unzip filename.zip
    - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
 
-## Pip
+# Pip
 
 ### Some observation about pip
 
 - pip install -r requirements.txt - requirements is a list of packages.
 - pip install package1 package2.
 
-## Automation with Cron
+# Automation with Cron
 
 * Cron
 
@@ -271,9 +269,9 @@ echo "the value is $(value)"
    - echo ${arra[@]} - Returns all.
    - echo ${#array[@]} - Array's length
   
-## Loop
+# Loop
 
-### The structure is:
+## The structure is:
 
 * 1 
    - It is possible write the loop in line using (;).
@@ -307,10 +305,8 @@ done
    - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
    - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
 
-#UPDATE HERE
-## Associative array
 
-## If statements
+# If statement
 
 ```
 if [ condition ]; then
@@ -332,7 +328,7 @@ if grep -q 'teste' text.txt; then
 fi
 ```
 
-## Functions
+# Functions
 
 * The variables are global, it is the default mode. To be local add "local" before de var
    - local var="text"
@@ -343,3 +339,6 @@ function function_name{
    return
 }
 ```
+
+#UPDATE HERE
+## Associative array
