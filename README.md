@@ -22,7 +22,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * git log
 * git reset --hard origin/master
 
-### Cheking installation
+### Checking installation
 * which - Used with a program. 
    - which bash. It prints where bash is installed.
    - program -v or program --version. It prints the program's version.
