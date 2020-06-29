@@ -1,6 +1,25 @@
-# Introduction to Shell - teste - hithub
+# Introduction to Shell 
 
 This content is a brief way to learn and review some basic and expert commands to make my and your daily data manipulation easier and productive. 
+
+#### GIT - Some commands used in this project.
+
+* git clone https://github.com/yanfonseca/yf_mytutorial_shell.git :
+* git status
+* git add . 
+* git touch .gitignore
+* git checkout -b branchname : Create branch and  git branch branchname also create a branch.
+* git checkout branchname : Change branch.
+* git checkout -- filename : It's like Ctrl + z.
+* git branch : It shows branches.
+* git remote -v
+* git remote 
+* git remote add origin [link]
+* git merge source destination
+* git push -u remote branch
+* git pull 
+* git commit -m 'Text'
+* git log
 
 ### Cheking installation
 * which - Used with a program. 
