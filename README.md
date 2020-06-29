@@ -7,7 +7,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * git clone https://github.com/yanfonseca/yf_mytutorial_shell.git :
 * git status
 * git add . 
-* git touch .gitignore
+* touch .gitignore
 * git checkout -b branchname : Create branch and  git branch branchname also create a branch.
 * git checkout branchname : Change branch.
 * git checkout -- filename : It's like Ctrl + z.
