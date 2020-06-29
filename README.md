@@ -20,6 +20,7 @@ This content is a brief way to learn and review some basic and expert commands t
 * git pull 
 * git commit -m 'Text'
 * git log
+* git reset --hard origin/master
 
 ### Cheking installation
 * which - Used with a program. 
