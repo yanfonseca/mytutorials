@@ -18,3 +18,4 @@
 * git commit -m 'Text' : To commit your file.
 * git log: It shows the log
 * git reset --hard origin/master - This command undo everything that you did in your branch and download everything from origin again. 
+* git remote rm <remote-name> : Delete remote. 
