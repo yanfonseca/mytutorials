@@ -4,5 +4,5 @@ This content is a brief way to learn and review some basic and expert commands t
 
 You'll see:
 
-[Shell](shell.md)
-[GIT](git_commands.md)
+* [Shell](shell.md)
+* [GIT](git_commands.md)
