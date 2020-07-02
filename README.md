@@ -6,6 +6,8 @@ You'll see:
 
 * [Shell](shell.md)
 * [GIT](git_commands.md)
+* Python
+* Anaconda
 
 
  
