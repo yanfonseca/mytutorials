@@ -8,6 +8,7 @@ You'll see:
 * [GIT](git_commands.md)
 * Python
 * Anaconda
+* SQL
 
 
  
