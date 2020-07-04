@@ -9,6 +9,7 @@ You'll see:
 * Python
 * Anaconda
 * SQL
+* REGEX
 
 
  
