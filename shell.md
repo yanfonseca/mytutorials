@@ -25,6 +25,9 @@
 
 * pwd   : *Print working directory* - It shows where you are in the filesystem.
 
+* apropos : To seach for commands thought the manual.
+   - apropos
+
 * history: Print a list of comands used recently.
     - !command - It will run the recent use of the command.
     - !2 - It will run te second command from history.
