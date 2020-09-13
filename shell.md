@@ -11,7 +11,7 @@
 * .     : Current directory.
 * ~     : Home directory.
 
-## Wildcards: 
+### Wildcards: 
 * `*` : It matches zero or more words or characters.
 * ? : It matches a single character.
 * `[ ]` : It matches any one character inside square brackets.
@@ -22,53 +22,48 @@
 # Commands
 
 * man    : To access the manual's command.
-   - man commandname/program: It hows comandname's manual.
+   - man commandname or man program: It shows comandname's manual.
 
 * pwd   : *Print working directory* - It shows where you are in the filesystem.
 
-* apropos : To seach for commands thought the manual.
-   - apropos
-
-* history: Print a list of comands used recently.
+* history: Print a list of commands used recently.
     - !command - It will run the recent use of the command.
     - !2 - It will run te second command from history.
-    - ctrl + R
+    - ctrl + R - It helps seach commands that you have used recently too.
 
 * ls    : *listing* - It lists the contents of your current directory. 
-    - ls .    : The contentes of the current directory.
-    - ls path/   : It lists the contents of path.
-    - ls -R -F: It lists recursively all contents and what is folder or executable.
+    - ls .    : The contents of the current directory.
+    - ls path/   : It lists the contents of a path.
+    - ls -R -F: It lists recursively all contents and which is folder or executable.
     
 * mv    : *move* - Move a file or directory from a directory to another one.
     - mv path1/filename1.csv path2/filename2.csv    - It Changes the name of a file too. 
     - mv path/filename1.csv path/filename2.csv path2 - Move files to a new path. 
-    - mv path1/filename1.csv path2/filename2.csv path3 - Move files from different paths to a new path.
     
-* cp    : *copy* - Copy file
+* cp    : *copy* - Copy file.
     - cp path/filename1.csv path/filename2.csv - Copy and change the name.
     - cp path/filename1.csv path/filename2.csv path2 - Copy files to a new path. 
     - cp path1/filename1.csv path2/filename2.csv path3 - Copy files from different paths to a new path.
     
-* rm    : *remove* - Remove files but not directory.
+* rm    : *remove* - Remove files.
     - rm path/filename1.csv path/filename2.csv - Remove files.
-    - rm path1/filename1.csv path2/filename2.csv - Copy files from different paths to a new path.
 
 * rmdir: *remove directory* - Remove a empty directory.
     - rmdir name - Remove an empty directory.
-    - rm -r name - Remove an empty directory.
+    - rm -r name - Remove a directory.
    
 * cat : *concatenate*. 
-  - cat *.csv - Concatenate and show all content.
-  - cat *.csv | more - Concatenate and show part of the content.
-  - cat *.csv | less - Concatenate and show part of the content with navigation between files.
-  - cat -n filename.csv - Concatenate file with line numbers.
-  - cat *.csv >> filename.csv - Concatente and append to a filename.csv.
-  - cat -e filename.csv - Go to the end of a file.
+  - cat *.csv - It concatenates and shows all contents.
+  - cat *.csv | more - It concatenates and shows parts of the content.
+  - cat *.csv | less - It concatenates and shows parts of the content with navigation between files.
+  - cat -n filename.csv - It concatenates file with line numbers.
+  - cat *.csv >> filename.csv - It concatentes and appends to a filename.csv.
+  - cat -e filename.csv - It goes to the end of a file.
   
 * paste: Join files horizontally.
  - paste filename1.csv filename.csv
  
-* less: Show just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
+* less: It shows just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
     - less filename1.txt filename2.txt.
 
 * more: Old way to see the content of a file.
@@ -85,7 +80,7 @@
 
 * grep: *general regular expression parser* - It selects lines that contains a text. It accepts REGEX.
     - Common flags: 
-    > -c => Print a count of the matching lines. 
+    > -c => Print only a count of selected lines. 
     -h => It don´t print the name of files. 
     -i => Not case sensitive. 
     -l => Print only the name of files that contain matches but not the matches. 
@@ -97,7 +92,7 @@
     - grep i word path/filename1.csv path/filename2.csv - With not sensitive case.
     - grep '[pc]' filename.txt - REGEX
  
-* wc: *word count* - It counts the numbers of characters, words and lines in a file and uses -c, -w and -l.
+* wc: *word count* - It counts the number of characters, words and lines in a file and uses -c, -w and -l.
       - grep word filename.csv : wc -l - It prints the number of the lines that word seached is find.
 
 * sort: 
@@ -106,15 +101,12 @@
    - sort -n -r filename.csv - Using -r flag reverse order.
    - sort -b -n filename.csv - Ignore branks.
    
-* uniq: Remove adjacent duplicates. It is like group by of any language but it has to sort the data before run this command.
+* uniq: Remove adjacent duplicates. It is like a group by of any programming language but it is necessary to sort the data before it runs this command.
    - uniq -c filename.csv - Group by unique and count of duplicates
    - sort | uniq -c
 
 * mkdir - Create a directory
      - mkdir name
-
-#do an UPDATE HERE
-* sed: 
 
 ### Flags
 
