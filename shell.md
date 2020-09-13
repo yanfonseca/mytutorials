@@ -108,9 +108,9 @@
 * mkdir - Create a directory
      - mkdir name
 
-### Flags
+## Flags
 
-#### Commands share the flags and it is possible to combine flags.
+### Commands share flags and it is also possible to combine flags.
 
 * -n : Number of lines
 * -R : Recursive
