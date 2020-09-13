@@ -102,7 +102,7 @@
    - sort -b -n filename.csv - Ignore branks.
    
 * uniq: Remove adjacent duplicates. It is like a group by of any programming language but it is necessary to sort the data before it runs this command.
-   - uniq -c filename.csv - Group by unique and count of duplicates
+   - uniq -c filename.csv - Group by unique and count of duplicates.
    - sort | uniq -c
 
 * mkdir - Create a directory
@@ -110,7 +110,7 @@
 
 ## Flags
 
-### Commands share flags and it is also possible to combine flags.
+#### Commands share flags and it is also possible to combine flags.
 
 * -n : Number of lines
 * -R : Recursive
@@ -121,13 +121,13 @@
 
 ## Output command in a file
 
-### By using the shell commands it is possible to export to a new file:
+#### By using the shell commands it is possible to export to a new file:
 
 * `>` - it exports to a file.
    - head -n 5 filename.csv > newfilename.csv - It exports the first five rows to a newfilename.csv
    - `>` newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
 
-### Combine commands using pipe
+#### Combine commands using pipe
 
  * | - The pipe symbol informs the shell to use the left output as input.
    - head filename.csv | tail -n 1
@@ -146,8 +146,8 @@ echo "It is:" $var_1 $var_2
 ```
 
 * Shell-within-a-shell - Using command date. 
-   - var="The date is `date` - It is possible to chall commands with backticks(` `)
-   - var="The date is $(date)" - With parenthesis is more modern
+   - var="The date is `date` - It is possible to show commands with backticks(` `)
+   - var="The date is $(date)" - This way (with parenthesis) is more modern.
    
 * It can begin with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash.
 
@@ -155,21 +155,18 @@ echo "It is:" $var_1 $var_2
    - ./script.sh - If shebang is mentioned in the first line.
    - $@ or $* - For all arguments.
    - $# - Lenght of arguments.
-   - expr 1 + 4 -  It will be 5.
-   - echo "5 + 7.5" | bc . The program bc makes possible to run. 
-   - echo "scale=2; 5 /3 " | bc
-   
-   bc is a basic calculator
+   - expr 1 + 4 - It will be 5.
+   - echo "5 + 7.5" | bc . The program bc, basic calculator, makes possible to run. 
+   - echo "scale=2; 5/3 " | bc
    
 * Double bracket notation
-
 ```
 expr 2 + 3
 echo $((3 + 3))
-
 5
 5
 ```
+
 ```
 num1=10
 num2=20
@@ -185,8 +182,8 @@ echo "the value is $(value)"
 
 ## Run commands later
 
-* Sabe the commands learned before inside a script ended by .sh using some editor and run it.
-   - bash scripname.sh - It does what is inside the script, can be manipulations or others.
+* It is possible write the commands learned before inside a script ended by .sh using some editor and run it.
+   - bash scripname.sh - It does what is inside the script, can be data manipulations or other.
 
 ### Pass filenames to scripts
 
