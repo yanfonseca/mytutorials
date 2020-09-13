@@ -4,17 +4,18 @@
 * which - Used with a program. 
    - which bash. It prints where bash is installed.
    - program -v or program --version. It prints the program's version.
+   - command --help
 
 ### Special characters
 * ..    : The directory above the one you are.
 * .     : Current directory.
-* ~     : Home directory. // COMO ALTERAR O HOME DIRECTORY? 
+* ~     : Home directory.
 
 ## Wildcards: 
 * `*` : It matches zero or more words or characters.
 * ? : It matches a single character.
 * `[ ]` : It matches any one character inside square brackets.
-   - [0123] - Matches to 0, 1 or 3.
+   - [0123] - Matches to 0, 1, 2 or 3.
 * { } : It matches any of the patterns comma-separeted.
    - {*.csv, *.txt} - Matches to files ended by the specification.
 
@@ -31,6 +32,7 @@
 * history: Print a list of comands used recently.
     - !command - It will run the recent use of the command.
     - !2 - It will run te second command from history.
+    - ctrl + R
 
 * ls    : *listing* - It lists the contents of your current directory. 
     - ls .    : The contentes of the current directory.
@@ -108,12 +110,12 @@
    - uniq -c filename.csv - Group by unique and count of duplicates
    - sort | uniq -c
 
+* mkdir - Create a directory
+     - mkdir name
+
 #do an UPDATE HERE
 * sed: 
 
-* mkdir - Create a directory
-     - mkdir name
-   
 ### Flags
 
 #### Commands share the flags and it is possible to combine flags.
@@ -216,6 +218,7 @@ echo "the value is $(value)"
    - -C Resume a previous file transfer.
 
 * curl
+   - curl -O http://www.anp.gov.br/images/dadosabertos/precos/200[1-9]-1_CA.csv
    - curl -O https://site.com/filename.csv - Download and save file with original name.
    - curl -o newfilename.csv https://site.com/filename
    
@@ -247,10 +250,23 @@ echo "the value is $(value)"
 * Others
    - unzip filename.zip
    - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
+   
+ *csvkit
+ https://csvkit.readthedocs.io/en/latest/
+ 
+ in2csv
+ 
+ csvlook
+ 
+ csvstat
 
 # Pip
 
 ### Some observation about pip
+
+- pip --help
+- pip list
+- pip --version
 
 - pip install -r requirements.txt - requirements is a list of packages.
 - pip install package1 package2.
