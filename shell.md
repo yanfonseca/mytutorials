@@ -61,13 +61,13 @@
   - cat -e filename.csv - It goes to the end of a file.
   
 * paste: Join files horizontally.
- - paste filename1.csv filename.csv
+   - paste filename1.csv filename.csv
  
 * less: It shows just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
-    - less filename1.txt filename2.txt.
+   - less filename1.txt filename2.txt.
 
 * more: Old way to see the content of a file.
- - more filename.txt 
+   - more filename.txt 
  
  * head: It shows the first 10 lines.
     - head filename.txt - First 10 lines.
