@@ -119,11 +119,11 @@
 * -f : Columns from a text file
 * -d : Separator - ','` ` ';'` ` ':'
 
-# Output command in a file
+## Output command in a file
 
 ### By using the shell commands it is possible to export to a new file:
 
-* `>` - it exports to a csv file.
+* `>` - it exports to a file.
    - head -n 5 filename.csv > newfilename.csv - It exports the first five rows to a newfilename.csv
    - `>` newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
 
@@ -141,7 +141,6 @@
    - echo Hello - It prints "Hello".
    - var=filename.csv - It can't have any space next to `=`.
    - head -n 3 $var - Access the filename.csv using the variable var.
-
 ```
 var_1='Hello'
 var_2='Good'
