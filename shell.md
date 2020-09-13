@@ -156,7 +156,7 @@ echo "It is:" $var_1 $var_2
 
 * Shell-within-a-shell - Using command date. 
    - var="The date is `date` - It is possible to chall commands with backticks(` `)
-   - var="The date is $(date)"
+   - var="The date is $(date)" - With parenthesis is more modern
    
 * It can begin with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash.
 
@@ -167,6 +167,8 @@ echo "It is:" $var_1 $var_2
    - expr 1 + 4 -  It will be 5.
    - echo "5 + 7.5" | bc . The program bc makes possible to run. 
    - echo "scale=2; 5 /3 " | bc
+   
+   bc is a basic calculator
    
 * Double bracket notation
 
@@ -343,3 +345,7 @@ function function_name{
 
 #UPDATE HERE
 ## Associative array
+
+
+## Crontab 
+It is possible schedule 
