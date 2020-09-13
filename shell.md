@@ -134,9 +134,7 @@
 
 ## Print variable's value
 
-### echo
-
-* It prints a value or a variable's value. The character $ is used do access the variable.
+* echo: It prints a value or a variable's value. The character $ is used do access the variable.
    - echo $OSTYPE - It prints the variable's value.
    - echo Hello - It prints "Hello".
    - var=filename.csv - It can't have any space next to `=`.
