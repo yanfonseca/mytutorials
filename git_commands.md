@@ -1,7 +1,7 @@
 
 # GIT - Some git's commands
 
-* git clone https://github.com/yanfonseca/yf_mytutorial_shell.git : Used to download some repository. 
+* git clone https://github.com/yanfonseca/mytutorials.git : Used to download some repository. 
 * git status : It show the status of your branch. 
 * git add . : Add all files to staged area.
 * touch .gitignore : Create the file .gitignore
