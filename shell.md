@@ -7,7 +7,7 @@
    - program --help or command --help. It prints a quicky help.
 
 ### Special characters
-* ..    : The directory above the one you are.
+* ..    : The directory above the one you are in.
 * .     : Current directory.
 * ~     : Home directory.
 
@@ -28,8 +28,8 @@
 
 * history: Print a list of commands used recently.
     - !command - It will run the recent use of the command.
-    - !2 - It will run te second command from history.
-    - ctrl + R - It helps seach commands that you have used recently too.
+    - !2 - It will run the second command from history.
+    - ctrl + R - It helps seach commands that you have used recently.
 
 * ls    : *listing* - It lists the contents of your current directory. 
     - ls .    : The contents of the current directory.
@@ -57,7 +57,7 @@
   - cat *.csv | more - It concatenates and shows parts of the content.
   - cat *.csv | less - It concatenates and shows parts of the content with navigation between files.
   - cat -n filename.csv - It concatenates file with line numbers.
-  - cat *.csv >> filename.csv - It concatentes and appends to a filename.csv.
+  - cat *.csv >> filename.csv - It concatentes and exports to a filename.csv.
   - cat -e filename.csv - It goes to the end of a file.
   
 * paste: Join files horizontally.
@@ -76,7 +76,7 @@
  * tail: It shows the last 10 lines and it is the opposite of head command.
  
  * cut: It selects columns from a text file.
-    - cut -f 2-5,8 -d , filename.csv - Columns 2 to 5 and 8. The flag -d shows the comma separator.
+    - cut -f 2-5,8 -d , filename.csv - Columns 2 to 5 and 8. The flag -d shows the comma separator. It is obligated to inform the fields with the flag -f.
 
 * grep: *general regular expression parser* - It selects lines that contains a text. It accepts REGEX.
     - Common flags: 
@@ -93,7 +93,7 @@
     - grep '[pc]' filename.txt - REGEX
  
 * wc: *word count* - It counts the number of characters, words and lines in a file and uses -c, -w and -l.
-      - grep word filename.csv : wc -l - It prints the number of the lines that word seached is find.
+      - grep word filename.csv : wc -l - It prints the number of the lines that word searched is find.
 
 * sort: 
    - sort filename.csv - Ascending alphabetical order.
@@ -112,11 +112,11 @@
 
 #### Commands share flags and it is also possible to combine flags.
 
-* -n : Number of lines
-* -R : Recursive
-* -F : Print / after all directories and * after runnable programms
-* -e : Print the end of a file
-* -f : Columns from a text file
+* -n : Number of lines.
+* -R : Recursive.
+* -F : Print / after all directories and * after runnable programms.
+* -e : Print the end of a file.
+* -f : Columns from a text file.
 * -d : Separator - ','` ` ';'` ` ':'
 
 ## Output command in a file
@@ -130,7 +130,7 @@
 #### Combine commands using pipe
 
  * | - The pipe symbol informs the shell to use the left output as input.
-   - head filename.csv | tail -n 1
+   - head filename.csv | tail -n 1 - It shows only the 10th row from filename.csv.
 
 ## Print variable's value
 
@@ -149,14 +149,14 @@ echo "It is:" $var_1 $var_2
    - var="The date is `date` - It is possible to show commands with backticks(` `)
    - var="The date is $(date)" - This way (with parenthesis) is more modern.
    
-* It can begin with #!/usr/bash in the first line - shebang. The /usr/bash is the location of Bash.
+* A file.sh can begin with #!/usr/bash in the first line and that code is called shebang. The /usr/bash is the location of Bash.
 
    - bash script.sh - To run.
-   - ./script.sh - If shebang is mentioned in the first line.
-   - $@ or $* - For all arguments.
+   - ./script.sh - If shebang is mentioned in the first line it is possible use ./filename.extension.
+   - $@ or $* - For access all arguments.
    - $# - Lenght of arguments.
-   - expr 1 + 4 - It will be 5.
-   - echo "5 + 7.5" | bc . The program bc, basic calculator, makes possible to run. 
+   - expr 1 + 4 - This expression returns 5. The expr command used only with integer numbers. 
+   - echo "5 + 7.5" | bc . The program bc, basic calculator, makes possible to run with decimals. 
    - echo "scale=2; 5/3 " | bc
    
 * Double bracket notation
