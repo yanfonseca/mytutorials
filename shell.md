@@ -1,5 +1,7 @@
 # Introduction to Shell 
 
+   An Introduction to command line, some really good tips that can hope you do some specic things using the Terminal window. 
+
 ### Checking installation
 * which - Used with a program. 
    - which bash. It prints where bash is installed.
@@ -191,7 +193,7 @@ echo "the value is $(value)"
   - bash scriptname.sh \.- It runs scriptiname for each file.
 
 * Process a single argument using $1, $2 to command-line parameters. It is possible pass n numbers of arguments and the first one it will be filename.
-   - cut -d, -f $2 $1 inside the file.sh - Inside file.sh for exemple.
+   - cut -d, -f $2 $1 inside the file.sh - Inside file.sh for example.
    - bash file.sh filename.csv number_columns - $1 is number_columns and $2 is the file
    - The shell waits forevers for the argument if it isn't informed.
    
@@ -237,14 +239,10 @@ echo "the value is $(value)"
    - unzip filename.zip
    - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
    
- *csvkit
- https://csvkit.readthedocs.io/en/latest/
+ * csvkit - This kit has a lot of tools to manipulate data, it is similar to pandas that is used in Python. For now often use python but can be a useful tool for some specific cases.
  
- in2csv
- 
- csvlook
- 
- csvstat
+ - link from reach the tool: https://csvkit.readthedocs.io/en/latest/
+ - There are tools to convert csv to other extensions, to manipulate a dataset, to query with sql
 
 # Pip
 
@@ -253,14 +251,12 @@ echo "the value is $(value)"
 - pip --help
 - pip list
 - pip --version
-
 - pip install -r requirements.txt - requirements is a list of packages.
 - pip install package1 package2.
 
-# Automation with Cron
+# Automation with Cron - Installed in Linux distribuitions.
 
 * Cron
-
    - crontab -l - Verify if exits some cron job.
    - `* * * * *` - minute, hour, day of month, month, day of week.
    - echo " * * * * * python filename.py" | crontab 
@@ -304,11 +300,11 @@ do
 done 
 ```
 
-* Inside of the block and after *do* is possible to run commands learned before, like: head, cut, grep and others. It is possible to do one manipulation by file or merge all files and after do what is necessary
+* Inside of the block and after *do* is possible to run commands learned before, like: head, cut, grep and others. It is possible to do one manipulation by file or merge all files and after do what is necessary.
 
 * Space in the name of the file causes problems
-   - head 'file name.csv' - it is one file but without quotation marks bash does not understand like one file.
-   - head file name.csv - it will be a problem because of bash file is a file and names.csv is another one.
+   - head 'file name.csv' - It is one file but without quotation marks bash does not understand like one file.
+   - head file name.csv - It will be a problem because file and names.csv are informed like two different files.
 
 
 # If statement
@@ -345,9 +341,5 @@ function function_name{
 }
 ```
 
-#UPDATE HERE
-## Associative array
+   Like any other languages but with restrictions, of course, Shell has if statments, loops, functions, arrays, associative arrays(they are equivalent form to dictionaries in python, for example. In fact the Terminal window is useful to solve a variaty of problemns and using Shell language it is possible to do more, but it is better to use it in specic cases when it is easyer and more fast than other solutions. I dind't focus in the details about the language I just learned what was important to solve problems with this different point view. 
 
-
-## Crontab 
-It is possible schedule 
