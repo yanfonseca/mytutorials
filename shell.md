@@ -239,10 +239,10 @@ echo "the value is $(value)"
    - unzip filename.zip
    - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
    
- * csvkit - This kit has a lot of tools to manipulate data, it is similar to pandas that is used in Python. For now often use python but can be a useful tool for some specific cases.
+ * csvkit - This kit has a lot of tools to manipulate data, it is similar to pandas that is used in Python. For now I often use python but can be a useful tool for some specific cases.
  
- - link from reach the tool: https://csvkit.readthedocs.io/en/latest/
- - There are tools to convert csv to other extensions, to manipulate a dataset, to query with sql
+ - The tool: https://csvkit.readthedocs.io/en/latest/
+ - There are tools to convert csv to other extensions, to manipulate a dataset, to query with sql.
 
 # Pip
 
