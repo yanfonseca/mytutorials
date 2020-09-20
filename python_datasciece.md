@@ -68,6 +68,21 @@ Between -1 and 1.
 ### Bernulli trial
 
 np.random.seed(123)
+np.empty()
+
+## The Binomial distribuition
+
+PMF
+
+## Poisson distribution
+
+
+
+
+
+
+
+
 
 
 
