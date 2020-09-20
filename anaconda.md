@@ -35,6 +35,11 @@ conda env remove --name ENVNAME
 conda export -n ENV
 conda env create --file file-name.yml
 
+### Anaconda Project
+
+* Useful to share projects.
+
+anaconda-project
 
 
 
