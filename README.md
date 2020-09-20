@@ -9,6 +9,6 @@ You'll see:
 * [Anaconda](anaconda.md)
 * REGEX
 * Python
-* SQL
+* [SQL](sql.md)
 
  
