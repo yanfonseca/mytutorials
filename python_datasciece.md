@@ -48,18 +48,21 @@ IQR - Inter Quantile Range - Inside the box plot.
 
 #### Variance
  
-  Variance of the data.
+Variance of the data.
  
 #### Standard deviation
 
-  std = sqrt(var)
+std = sqrt(var)
   
 #### Covariance
 
- It has units
+It has dimension.
  
 #### Person correlation coefficient
 
 Measure covariance too but dimensionless.
 Between -1 and 1.
+
+#### Statistical inference
+
 
