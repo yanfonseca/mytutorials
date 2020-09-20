@@ -1,19 +1,19 @@
 # Python for Data Science 
 
-#### Zscore
+### Zscore
 
-#### Percentual Change
+### Percentual Change
 
 # Statistics
 
 Use numpy.
 
-#### Histogram
+### Histogram
 
 * Bins
   Commom rule is the Square root of number of samples.
 
-#### ECDF - Empirical cumulative distribution function
+### ECDF - Empirical cumulative distribution function
 
 ```
 def ecdf(data):
@@ -34,35 +34,40 @@ plt.plot(data, ecdf(data))
 
 Start to see the histogram, than warplot, ECDF.
 
-#### Percentile
+### Percentile
 
 Mean == 50% Percentile
 np.percentile()
 
-#### Box Plot
+### Box Plot
 
 [75, 50, 25] percentage quatiles
 IQR - Inter Quantile Range - Inside the box plot.
 1,5IQR - Extreme.
 2 x IQR - More is considered outlier.
 
-#### Variance
+### Variance
  
 Variance of the data.
  
-#### Standard deviation
+### Standard deviation
 
 std = sqrt(var)
   
-#### Covariance
+### Covariance
 
 It has dimension.
  
-#### Person correlation coefficient
+### Person correlation coefficient
 
 Measure covariance too but dimensionless.
 Between -1 and 1.
 
-#### Statistical inference
+## Statistical inference
+
+### Bernulli trial
+
+np.random.seed(123)
+
 
 
