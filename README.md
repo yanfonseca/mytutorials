@@ -9,6 +9,7 @@ You'll see:
 * [Anaconda](anaconda.md)
 * REGEX
 * Python
+* Python - Data Science(python_datasciece.md)
 * [SQL](sql.md)
 
  
