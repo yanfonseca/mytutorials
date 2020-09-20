@@ -6,10 +6,9 @@ You'll see:
 
 * [Shell](shell.md)
 * [GIT](git_commands.md)
-* Python
-* Anaconda
-* SQL
+* [Anaconda](anaconda.md)
 * REGEX
-
+* Python
+* SQL
 
  
