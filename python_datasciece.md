@@ -65,10 +65,13 @@ Between -1 and 1.
 
 ## Statistical inference
 
+## Discrete quantity
+
 ### Bernulli trial
 
 np.random.seed(123)
 np.empty()
+plt.margins()
 
 ## The Binomial distribuition
 
@@ -76,6 +79,9 @@ PMF
 
 ## Poisson distribution
 
+## Continuous quantity
+
+## Normal distribuition
 
 
 
