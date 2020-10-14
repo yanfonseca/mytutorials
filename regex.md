@@ -60,4 +60,8 @@
 * O retrovisor referencia o texto casado, encontrado, e não a expressão regular do grupo.
 * ([0-9])\1	66 mas não casa com 69 porque o \1 é 6, dessa forma, só casa números iguais.
 
+### Intervalos
 
+* 0-9	a-z	A-Z	|Não casam com letras acentuadas
+* [			Pode ficar em qualquer posição dentro de uma lista
+* ]	Deve ficar no início de uma lista para não confundir com o fechamento da lista.
