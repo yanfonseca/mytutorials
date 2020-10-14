@@ -41,5 +41,23 @@
 |()|	Delimita um grupo|
 |\1...\9|	Retrovisor, usado para casar grupos de 1-9 (casa trechos já casados, útil quando se sabe o que será casao máximo são 9)|
 
+* Boa-tarde|boa-noite
+* (ha!)+				ha!, ha!ha! ....
+* (\.[0-9]){3}			.0.1.2, .2.3.6 ...
+* Boa-(tarde|noite)		Boa-tarde, Boa-noite
+* (# | n\.|núm) 7			# 7, n. 7, núm 7
+* (in|con)?certo			incerto, concerto, certo
+* ((su|hi)per)?mercado		mercado, supermercado, hipermecardo
+* [[:alpah:]_]+\(\)			útil para achar funções em códigos
+* (quero)-\1			quero-quero
+* ([A-Za-z]+)-\1			quero-quero, bate-bate
+* ([A-Za-z]+)-?\1			quero-quero, bate-bate, bombom, lili, dudu, bibi 
+* \b([A-Za-z]+)-?\1\b
+* (lenta)(mente) é \2 \1		lentamente é mente lenta
+* ((band)eira)nte \1 \2		bandeirante badeira banda
+* ((((a)b)c)d)-1 \1,\2,\3,\4	abcd-1 = abcd, abc, ab,a
+* Contar os parênteses da esquerda para a direita, esse vai ser o número do retrovisor.
+* O retrovisor referencia o texto casado, encontrado, e não a expressão regular do grupo.
+* ([0-9])\1	66 mas não casa com 69 porque o \1 é 6, dessa forma, só casa números iguais.
 
 
