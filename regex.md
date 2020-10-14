@@ -3,11 +3,11 @@
 
 ### Representantes
 
-| Metacaractere | Função 
-|----|----|----|----|----|
-| .  | Um caractere qualquer 
-|[]  | Lista de caracteres permitidos e são literais  
-|   [^]| Lista de caracteres proibidos  
+| Metacaractere | Função| 
+|----|----|
+| .  | Um caractere qualquer| 
+|[]  | Lista de caracteres permitidos e são literais|  
+|   [^]| Lista de caracteres proibidos |
 
 
 
