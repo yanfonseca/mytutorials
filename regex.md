@@ -69,6 +69,7 @@
 # Posix - Para resolver caracteres acentuados e outras coisas mais
 
 |Classe POSIX|	Similar	|Significado|
+|:---:|----|----|
 |[:upper:]|	[A-Z]	|Letras maiúsculas|
 |[:lower:]|	[a-z]	|Letras minúsculas|
 |[:alpha:]|	[A-Za-z]	|Maiúsculas e minúsculas|
