@@ -63,5 +63,22 @@
 ### Intervalos
 
 * 0-9	a-z	A-Z	|Não casam com letras acentuadas
-* [			Pode ficar em qualquer posição dentro de uma lista
-* ]	Deve ficar no início de uma lista para não confundir com o fechamento da lista.
+* \[ 	Pode ficar em qualquer posição dentro de uma lista
+* \]	Deve ficar no início de uma lista para não confundir com o fechamento da lista
+
+# Posix - Para resolver caracteres acentuados e outras coisas mais
+
+|Classe POSIX|	Similar	|Significado|
+|[:upper:]|	[A-Z]	|Letras maiúsculas|
+|[:lower:]|	[a-z]	|Letras minúsculas|
+|[:alpha:]|	[A-Za-z]	|Maiúsculas e minúsculas|
+|[:alphanum:]|	[A-Za-z0-9]	|Letras e números|
+|[:digit:]|	[0-9]	|Números|
+|[:xdigit:]|	[0-9A-Fa-f]|	Números hexadecimais|
+|[:punc:]|	[.,!?;...]|	Sinais de pontuação|
+|[:blank:]|	[ \t]	|Espaço e tab|
+|[:space:]|	[ \t\n\r\f\v]	|Caracteres brancos|
+|[:cntrl:]|		Caractere de controle|
+|[:graph:]|	|[^ \t\n\r\f\v]	|Caracteres imprimíveis|
+|[:print:]|	|[^ \t\n\r\f\v]	|Imprimíveis e o espaço|
+
