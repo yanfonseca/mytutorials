@@ -21,9 +21,11 @@ python3 -m virtualenv filepath
 sudo apt-get install python3-venv
 
 * Para ativar a env 
+
 source filepath/bin/activate
 
 * Para desativar a env
+
 deactivate
   
 ### Env para Machine Learning
