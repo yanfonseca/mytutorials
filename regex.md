@@ -42,6 +42,7 @@
 |()|	Delimita um grupo|
 |\1...\9|	Retrovisor, usado para casar grupos de 1-9 (casa trechos já casados, útil quando se sabe o que será casao máximo são 9)|
 
+#### Exemplos
 * Boa-tarde|boa-noite
 * (ha!)+				
     - ha!, ha!ha! ....
