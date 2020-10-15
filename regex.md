@@ -1,4 +1,5 @@
-# Resumo do livro do Piazinho.
+## Notas do livro Expressões Regulares - Marinho Jargas
+
 ## Capítulo 2
 
 ### Representantes
