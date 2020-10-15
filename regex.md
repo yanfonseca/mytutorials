@@ -43,7 +43,8 @@
 |\1...\9|	Retrovisor, usado para casar grupos de 1-9 (casa trechos já casados, útil quando se sabe o que será casao máximo são 9)|
 
 * Boa-tarde|boa-noite
-* (ha!)+				ha!, ha!ha! ....
+* (ha!)+				
+- ha!, ha!ha! ....
 * (\.[0-9]){3}			.0.1.2, .2.3.6 ...
 * Boa-(tarde|noite)		Boa-tarde, Boa-noite
 * (# | n\.|núm) 7			# 7, n. 7, núm 7
