@@ -16,6 +16,10 @@ pip3 --version
 python3 -m pip install --user -U virtualenv
 python3 -m virtualenv filepath
 
+* Como alternativa pode usar a venv
+
+sudo apt-get install python3-venv
+
 * Para ativar a env 
 source filepath/bin/activate
 
