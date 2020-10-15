@@ -27,4 +27,5 @@ deactivate
 python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 
 * Se foi criada a env, como sugerido acima, é necessário registrar ao jupyter e dar um nome
+
 python3 -m ipykernel install --user --name=python3
