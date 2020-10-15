@@ -13,8 +13,13 @@ pip3 --version
 
 ## Environment
 
+* Instalar a virtualenv
+
 python3 -m pip install --user -U virtualenv
-python3 -m virtualenv filepath
+
+* Instalar a virtualenv dentro de uma pasta
+
+python3 -m virtualenv nomeDaPasta
 
 * Como alternativa pode usar a venv
 
