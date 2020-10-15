@@ -83,3 +83,10 @@
 |[:graph:]|	\[^ \t\n\r\f\v]	|Caracteres imprimíveis|
 |[:print:]|	\[^ \t\n\r\f\v]	|Imprimíveis e o espaço|
 
+* Maiúscula dentro de uma lista [[:upper:]]. É necessário usar o colchete do posix e da lista.
+* \[^[:alpha:]]	Não vai pegar letras maiúsculas ou minúsculas acentuadas ou não
+* :-@		Do : até o @ na tabela – aonde que vejo isso?
+* A-z		Do A até o z na tabela 
+
+Capítulo 3
+
