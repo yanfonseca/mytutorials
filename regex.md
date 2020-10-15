@@ -70,16 +70,16 @@
 
 |Classe POSIX|	Similar	|Significado|
 |:---:|----|----|
-|[:upper:]|	[A-Z]	|Letras maiúsculas|
-|[:lower:]|	[a-z]	|Letras minúsculas|
-|[:alpha:]|	[A-Za-z]	|Maiúsculas e minúsculas|
-|[:alphanum:]|	[A-Za-z0-9]	|Letras e números|
-|[:digit:]|	[0-9]	|Números|
-|[:xdigit:]|	[0-9A-Fa-f]|	Números hexadecimais|
-|[:punc:]|	[.,!?;...]|	Sinais de pontuação|
-|[:blank:]|	[ \t]	|Espaço e tab|
-|[:space:]|	[ \t\n\r\f\v]	|Caracteres brancos|
-|[:cntrl:]|		Caractere de controle|
-|[:graph:]|	|[^ \t\n\r\f\v]	|Caracteres imprimíveis|
-|[:print:]|	|[^ \t\n\r\f\v]	|Imprimíveis e o espaço|
+|[:upper:]|	\[A-Z]	|Letras maiúsculas|
+|[:lower:]|	\[a-z]	|Letras minúsculas|
+|[:alpha:]|	\[A-Za-z]	|Maiúsculas e minúsculas|
+|[:alphanum:]|	\[A-Za-z0-9]	|Letras e números|
+|[:digit:]|	\[0-9]	|Números|
+|[:xdigit:]|	\[0-9A-Fa-f]|	Números hexadecimais|
+|[:punc:]|	\[.,!?;...]|	Sinais de pontuação|
+|[:blank:]|	\[ \t]	|Espaço e tab|
+|[:space:]|	\[ \t\n\r\f\v]	|Caracteres brancos|
+|[:cntrl:]|		|Caractere de controle|
+|[:graph:]|	\[^ \t\n\r\f\v]	|Caracteres imprimíveis|
+|[:print:]|	\[^ \t\n\r\f\v]	|Imprimíveis e o espaço|
 
