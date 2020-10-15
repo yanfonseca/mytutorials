@@ -46,10 +46,13 @@
 * (ha!)+				
     - ha!, ha!ha! ....
 * (\.[0-9]){3}			
-        .0.1.2, .2.3.6 ...
-* Boa-(tarde|noite)		Boa-tarde, Boa-noite
-* (# | n\.|núm) 7			# 7, n. 7, núm 7
-* (in|con)?certo			incerto, concerto, certo
+    - .0.1.2, .2.3.6 ...
+* Boa-(tarde|noite)		
+    - Boa-tarde, Boa-noite
+* (# | n\.|núm) 7			
+    - # 7, n. 7, núm 7
+* (in|con)?certo			
+    - incerto, concerto, certo
 * ((su|hi)per)?mercado		mercado, supermercado, hipermecardo
 * [[:alpah:]_]+\(\)			útil para achar funções em códigos
 * (quero)-\1			quero-quero
