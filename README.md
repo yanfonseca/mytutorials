@@ -8,6 +8,7 @@ You'll see:
 * [GIT](git_commands.md)
 * [Anaconda](anaconda.md)
 * [REGEX](regex.md)
+* [Docker](docker.md)
 * [Python](python.md)
 * [Python - Data Science](python_datasciece.md)
 * [SQL](sql.md)
