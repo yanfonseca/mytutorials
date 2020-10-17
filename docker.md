@@ -1,4 +1,3 @@
-
 ## Docker 
 
 ### Comandos básicos
@@ -38,7 +37,7 @@
 
 ### Lista de contêineres
 
-docker container ls -a
+    docker container ls -a
 
 | Parâmetros |  Função   |
 |------------|-----------|
@@ -55,5 +54,6 @@ docker container ls -a
 
     docker container stop nome_do_container
 
-# Como criar imagens?
+### Como criar imagens?
+
 
