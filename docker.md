@@ -74,8 +74,8 @@
 ```FROM ubuntu:16.04
 RUN apt-get update && apt-get install nginx -y
 COPY file_copy_to_container /tmp/file_copy_to_container
-CMD Bash
-```
+CMD Bash```
+
     O -t é o parâmetro para informar o nome da imagem:
 
     docker image build -t nome_da_imagem:versao_da_imagem
