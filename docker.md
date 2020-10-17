@@ -3,17 +3,17 @@
 
 ### Comandos básicos
 
-docker --help
+    docker --help
 
-docker image list
+    docker image list
 
-docker image pull nome_da_imagem
+    docker image pull nome_da_imagem
 
-docker image inspect nome_da_imagem
+    docker image inspect nome_da_imagem
 
 ### Parâmetros usados para execução de um contêiner
 
-docker container run -d -it python
+    docker container run -d -it python
 
 | Parâmetros |  Função   |
 |------------|-----------|
@@ -29,12 +29,12 @@ docker container run -d -it python
 
 * Mapepamento de porta
 
-docker container run -p host:container nome_da_imagem
+    docker container run -p host:container nome_da_imagem
 
 * Gerenciamento da RAM e CPU
 
-docker container run -m 512M nome_da_imagem
-docker container run -c 512 nome_da_imagem
+    docker container run -m 512M nome_da_imagem
+    docker container run -c 512 nome_da_imagem
 
 ### Lista de contêineres
 
@@ -51,6 +51,9 @@ docker container ls -a
 
 * Se usar a flag -i no start, vai direto para o modo interativo.
 
-docker container start nome_do_container
+    docker container start nome_do_container
 
-docker container stop nome_do_container
+    docker container stop nome_do_container
+
+# Como criar imagens?
+
