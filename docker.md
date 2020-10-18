@@ -114,11 +114,37 @@ isolados de contêineres e que podem ser consumidos por quaisquer contêineres.
 
     docker network ls
 
-    * Bridge - Rede padrão para os contêineres. Cria uma interface que faz a ponte entre 
+* Bridge - Rede padrão para os contêineres. Cria uma interface que faz a ponte entre 
     docker0 do docker host. Recebe o endereço de ip automaticamente.
 
     Se o docker host tiver acesso a a internet, os contêineres também terão.
 
-    * none
+* none - Serve para isolar o contêiner para comunicações externas e não recebe 
+interface para comunicação externa e somente a interface com localhost. É uma rede usada para 
+contêineres que manipulam arquivos e não precisam enviá-los para outro local. Por exemplo, 
+o contêiner de back up que através do volume de contêiner de banco de dados faz o dump.
+
     
-    * host
+* host
+
+* Redes que podem ser criadas com o: 
+
+    * Driver Bridge. Já tem o serviço DNS do docker.
+
+        docker network create --driver bridge isolated_nw
+        
+        docker network list
+    
+    Contêineres de um rede não pode acessar outro contêiner de outra rede, para isso é necessário
+    expor postas no docker host.
+
+
+        * Para descobrir contêineres associados a uma rede:
+
+            docker network inspect isolated_nw
+
+    * Driver Overlay
+
+        Permite a comunicação entre hosts docker.
+
+### Docker em diferentes ambientes
