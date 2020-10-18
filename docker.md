@@ -148,19 +148,16 @@ o contêiner de back up que através do volume de contêiner de banco de dados f
 
 ### Docker em diferentes ambientes
 
-
     1.  Docker machine
-
             https://docs.docker.com/machine/
 
     Responsável pela gerência distribuída, permite instalar e gerenciar docker hosts.
 
-    2. Docker é dividido em Docker Host e Docker Client, o primeiro roda em backrgroud e o segundo é resonsável por recebeber comandos que gerenciam o Docker Host.
+    2. Docker é dividido em Docker Host e Docker Client:
+        * o primeiro roda em backrgroud e o segundo é resonsável por recebeber comandos que gerenciam o Docker Host.
 
     3. É necessário usar dos drivers:
-
             https://docs.docker.com/machine/drivers/
-
 
 #### Comandos
 
@@ -177,6 +174,7 @@ o contêiner de back up que através do volume de contêiner de banco de dados f
 * O arquivo de definição do Docker Compose é o local onde é espeficiado todo o ambiente, 
 os serviços, o volume e a rede. 
 * Esse arquivo tem o formato YAML e docker-compose.yml é seu nome padrão.
+
 
 #### Como é o arquivo docker-compose.yml?
 
@@ -195,7 +193,7 @@ services:
       ports:
         - "5000:5000"                               # equivalente ao parâmerto -p
   redis:
-      image: redis                                  # Vai buscar a imagem no hub.docker.com por padrão                                                                
+      image: redis                                  # busca imagem no hub.docker.com, por padrão
 ```
 
  Versões do docker-compose
