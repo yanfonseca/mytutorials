@@ -199,3 +199,8 @@ services:
  Versões do docker-compose
     https://docs.docker.com/compose/compose-file/#versioning
 
+* build : Usado para constuir imagens
+* up : Inciar todos serviçõs que estão no arquivo docker-compose.yml
+* stop : Parar todos serviços que estão no docker-compose.yml
+* ps : Lista todos serviços iniciador a partir do docker-compose.yml
+
