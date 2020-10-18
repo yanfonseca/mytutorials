@@ -81,3 +81,44 @@ CMD Bash
     O -t é o parâmetro para informar o nome da imagem:
 
     docker image build -t nome_da_imagem:versao_da_imagem
+    
+### Armazenamento no Docker
+
+* Mapeamento de pasta específica do host que pode ser compartilhada com contêiner. 
+Lembrando a regra host:container ainda é válida aqui.
+
+    docker container run -v /var/lib/container1:/var ubuntu
+
+* Volume em um contêiner que vai ser consumido por outros contêiners(contêiner especial).
+
+    docker create -v /dbdata --name dbdata postgres /bin/true
+
+    Para consumir o volume do contatêiner acima:
+
+        docker container run -d --volumes-from dbdata --name db2 postgres
+
+    Dessa forma, o contêiner db2 terá pasta dbdata do contêiner dbdata, 
+    o que facilita na portabilidade dos contêineres já que existe independência 
+    em relação ao host.
+
+* Na versão 1.9 foi criada a possibilidade de criar volumes 
+isolados de contêineres e que podem ser consumidos por quaisquer contêineres.
+
+    docker volume create --name dbdata
+
+    * É necessário associar uma pasta de dentro do contêiner com o volume isolado. 
+
+    docker container run -d -v dbdata:/var/lib/data postgres
+
+### Rede no Docker
+
+    docker network ls
+
+    * Bridge - Rede padrão para os contêineres. Cria uma interface que faz a ponte entre 
+    docker0 do docker host. Recebe o endereço de ip automaticamente.
+
+    Se o docker host tiver acesso a a internet, os contêineres também terão.
+
+    * none
+    
+    * host
