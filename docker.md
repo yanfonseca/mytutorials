@@ -138,10 +138,9 @@ o contêiner de back up que através do volume de contêiner de banco de dados f
     Contêineres de um rede não pode acessar outro contêiner de outra rede, para isso é necessário
     expor postas no docker host.
 
+    Para descobrir contêineres associados a uma rede:
 
-        * Para descobrir contêineres associados a uma rede:
-
-            docker network inspect isolated_nw
+       docker network inspect isolated_nw
 
     * Driver Overlay
 
