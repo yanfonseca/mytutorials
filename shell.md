@@ -1,6 +1,6 @@
 # Introduction to Shell 
 
-   An Introduction to command line, some really good tips that can hope you do some specic things using the Terminal window. 
+   An Introduction to command line, some really good tips that can help you do some specic things using the terminal window. 
 
 ### Checking installation
 * which - Used with a program. 
