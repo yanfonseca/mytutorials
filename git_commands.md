@@ -1,5 +1,5 @@
 
-# GIT - Some git's commands
+## GIT - Commands
 
     git clone https://github.com/yanfonseca/mytutorials.git : Used to download some repository. 
 
