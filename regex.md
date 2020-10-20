@@ -114,7 +114,7 @@
 
 * Maiúscula dentro de uma lista [[:upper:]]. É necessário usar o colchete do posix e da lista.
 * \[^[:alpha:]]	Não vai pegar letras maiúsculas ou minúsculas acentuadas ou não
-* :-@		Do : até o @ na tabela – aonde que vejo isso?
+* :-@		Do : até o @ na tabela 
 * A-z		Do A até o z na tabela 
 
 ## Capítulo 3
