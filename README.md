@@ -4,8 +4,8 @@ This content is a brief way to learn and review some basics and specialized comm
 
 You'll see:
 
-. [Shell](shell.md)
-. [GIT](git_commands.md)
+1. [Shell](shell.md)
+1. [GIT](git_commands.md)
 * [Anaconda](anaconda.md)
 * [RegEx](regex.md)
 * [Docker](docker.md)
