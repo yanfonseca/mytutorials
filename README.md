@@ -10,7 +10,7 @@ You'll see:
 1. [RegEx](regex.md)
 1. [Docker](docker.md)
 1. [Python](python.md)
-1. [Python - Data Science](python_datasciece.md)
+1. [Python - Data Science](python_datascience.md)
 1. [SQL](sql.md)
 
  
