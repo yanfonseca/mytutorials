@@ -1,9 +1,9 @@
 
 # GIT - Some git's commands
 
-* git clone https://github.com/yanfonseca/mytutorials.git : Used to download some repository. 
-* git status : It show the status of your branch. 
-* git add . : Add all files to staged area.
+    git clone https://github.com/yanfonseca/mytutorials.git : Used to download some repository. 
+    git status : It show the status of your branch. 
+    git add . : Add all files to staged area.
 * touch .gitignore : Create the file .gitignore
 * git checkout -b branchname : It creates a branch. The command ´git branch branchname´ also create a branch.
 * git checkout branchname : It changs to branchname.
