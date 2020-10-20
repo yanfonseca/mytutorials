@@ -27,15 +27,24 @@
 |$|	Fim da linha |
 |\b|	Borda, início ou fim da palavra|
 
-* Início da linha	 
+* Início da linha
+
     ^[^0-9]		
+
 * Linha vazia
+
     ^$ 		
+
 * Linhas que tenham entre 20 e 60 caracteres
+
     ^.{20,60}	
+
 * Casa com: dia, diagragma, bom-dia
+
     \bdia		
+
 * Casa com: dia, melodia, bom-dia
+
     dia\b		
 
 ### Outros
