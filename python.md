@@ -19,6 +19,14 @@
       sudo apt install python3-pip
       pip3 --version
 
+### Instalar com o pip
+
+- requirements.txt is a list of packages.
+
+      pip install -r requirements.txt 
+
+      pip install package1 package2.
+
 ### Environment
 
 * Instalar a virtualenv
