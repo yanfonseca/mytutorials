@@ -28,15 +28,15 @@
 
 * Mapepamento de porta
 
-    docker container run -p host:container nome_da_imagem
+        docker container run -p host:container nome_da_imagem
 
 * Gerenciamento da RAM e CPU
 
-    docker container run -m 512M nome_da_imagem
-    docker container run -c 512 nome_da_imagem
+        docker container run -m 512M nome_da_imagem
+        docker container run -c 512 nome_da_imagem
 
 ### Lista de contêineres
-
+    
     docker container ls -a
 
 | Parâmetros |  Função   |
@@ -50,20 +50,21 @@
 
 * Se usar a flag -i no start, vai direto para o modo interativo.
 
-    docker container start nome_do_container
+      docker container start nome_do_container
 
-    docker container stop nome_do_container
+      docker container stop nome_do_container
 
 ### Como criar imagens?
 
 1. É possível criar uma imagem a partir de um contêiner que foi modificado. Depois das modificações basta parar o contêiner e criar a imagem.
 
     * Parar o contêiner
-        docker container stop nome_do_container
+        
+            docker container stop nome_do_container
 
     * Salvar o contêiner
 
-        docker container commit nome_do_container nome_da_imagem:versao_da_imagem
+            docker container commit nome_do_container nome_da_imagem:versao_da_imagem
 
 2. Através do Dockerfile
 
@@ -80,35 +81,38 @@ CMD Bash
 * o que significa?
     
     FROM - Através da imagem ubuntu:16.04
+    
     RUN  - aplique os comandos, equivalente a digitar no terminal
+    
     COPY - Copie dados de um diretório ou copie uma pasta para /tmp
+    
     CMD  - No modo iterativo, por padrão, abrirá o bash
 
 * O -t é o parâmetro para informar o nome da imagem:
 
-    docker image build -t nome_da_imagem:versao_da_imagem
+        docker image build -t nome_da_imagem:versao_da_imagem
     
 ### Armazenamento no Docker
 
 * Mapeamento de pasta específica do host que pode ser compartilhada com contêiner. 
-Lembrando a regra host:container ainda é válida aqui.
+Lembrando que a regra host:container é válida aqui.
 
     docker container run -v /var/lib/container1:/var ubuntu
 
 * Volume em um contêiner que vai ser consumido por outros contêiners(contêiner especial).
 
-    docker create -v /dbdata --name dbdata postgres /bin/true
+        docker create -v /dbdata --name dbdata postgres /bin/true
 
     Para consumir o volume do contatêiner acima:
 
         docker container run -d --volumes-from dbdata --name db2 postgres
 
-    Dessa forma, o contêiner db2 terá pasta dbdata do contêiner dbdata, 
+    Dessa forma, o contêiner db2 acessará a pasta dbdata do contêiner dbdata, 
     o que facilita na portabilidade dos contêineres já que existe independência 
     em relação ao host.
 
-* Na versão 1.9 foi criada a possibilidade de criar volumes 
-isolados de contêineres e que podem ser consumidos por quaisquer contêineres.
+* Na versão 1.9 foi criada a possibilidade de criar volumes isolados de 
+contêineres e que podem ser consumidos por quaisquer contêineres. Essa forma de compartilhamento de volumes é a recomendada.
 
     docker volume create --name dbdata
 
@@ -118,35 +122,36 @@ isolados de contêineres e que podem ser consumidos por quaisquer contêineres.
 
 ### Rede no Docker
 
-    docker network ls
+1. Mostra as criadas
 
-* Bridge - Rede padrão para os contêineres. Cria uma interface que faz a ponte entre 
-    docker0 do docker host. Recebe o endereço de ip automaticamente.
+        docker network ls
 
+1. Bridge - Rede padrão para os contêineres. Cria uma interface que faz a ponte entre 
+    docker0 do docker host. Recebe o endereço de ip automaticamente. 
     Se o docker host tiver acesso a a internet, os contêineres também terão.
 
-* none - Serve para isolar o contêiner para comunicações externas e não recebe 
+1. none - Serve para isolar o contêiner para comunicações externas e não recebe 
 interface para comunicação externa e somente a interface com localhost. É uma rede usada para 
 contêineres que manipulam arquivos e não precisam enviá-los para outro local. Por exemplo, 
 o contêiner de back up que através do volume de contêiner de banco de dados faz o dump.
 
     
-* host
+1. host
 
-* Redes que podem ser criadas com o: 
+* Redes que podem ser criadas usando drivers:
 
     * Driver Bridge. Já tem o serviço DNS do docker.
 
-        docker network create --driver bridge isolated_nw
+            docker network create --driver bridge isolated_nw
         
-        docker network list
+            docker network list
     
     Contêineres de um rede não pode acessar outro contêiner de outra rede, para isso é necessário
     expor postas no docker host.
 
     Para descobrir contêineres associados a uma rede:
 
-       docker network inspect isolated_nw
+      docker network inspect isolated_nw
 
     * Driver Overlay
 
@@ -154,37 +159,33 @@ o contêiner de back up que através do volume de contêiner de banco de dados f
 
 ### Docker em diferentes ambientes
 
-    1.  Docker machine
-            https://docs.docker.com/machine/
+1.  Docker machine: https://docs.docker.com/machine/
 
-    Responsável pela gerência distribuída, permite instalar e gerenciar docker hosts.
+    * Responsável pela gerência distribuída, permite instalar e gerenciar docker hosts.
 
-    2. Docker é dividido em Docker Host e Docker Client:
+1. Docker é dividido em Docker Host e Docker Client:
         * o primeiro roda em backrgroud e o segundo é resonsável por recebeber comandos que gerenciam o Docker Host.
 
-    3. É necessário usar dos drivers:
-            https://docs.docker.com/machine/drivers/
+1. É necessário usar dos drivers: https://docs.docker.com/machine/drivers/
 
 #### Comandos
 
-    Lembrando que é necessário instalar o Docker Machine antes caso contrário o comando não será encontrado.
+Lembrando que é necessário instalar o Docker Machine antes caso contrário o comando não será encontrado.
 
     docker-machine create -driver=nome_do_driver nome_do_ambiente
 
-
 ### Docker compose
 
-* Simplificando a execução de múltiplos contêineres.
+* Simplifica a execução de múltiplos contêineres.
 * Cada contêiners é considerado um serviço.
 * Também é possível especificar volumes, redes para os serviços.
 * O arquivo de definição do Docker Compose é o local onde é espeficiado todo o ambiente, 
 os serviços, o volume e a rede. 
 * Esse arquivo tem o formato YAML e docker-compose.yml é seu nome padrão.
 
-
 #### Como é o arquivo docker-compose.yml?
 
-* Identação é importante
+* No arquivo a identação é importante
 * Cada linha é definida como uma chave, valor ou lista
 
 ```
@@ -202,11 +203,10 @@ services:
       image: redis                                  # busca imagem no hub.docker.com, por padrão
 ```
 
- Versões do docker-compose
-    https://docs.docker.com/compose/compose-file/#versioning
+Versões do docker-compose: https://docs.docker.com/compose/compose-file/#versioning
 
 * build : Usado para constuir imagens
-* up : Inciar todos serviçõs que estão no arquivo docker-compose.yml
+* up : Inciar todos serviços que estão no arquivo docker-compose.yml
 * stop : Parar todos serviços que estão no docker-compose.yml
 * ps : Lista todos serviços iniciador a partir do docker-compose.yml
 
