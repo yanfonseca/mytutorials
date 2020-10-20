@@ -1,6 +1,13 @@
 # Python
 
 ## Pip
+
+### Comandos básicos
+      pip --help
+
+            pip list
+                        pip --version
+
 * Verificar se está instalado
 
       python3 -m pip --version
