@@ -1,6 +1,6 @@
 ## Python
 
-### Pip
+## Pip
 
 #### Comandos básicos
       pip --help
@@ -60,3 +60,10 @@
 * Para ativar o 
       
       jupyter notebook 
+
+## Dicas:
+
+* Bibliotecas que podem ter o que você procura:
+      
+1. functools
+2. collections
