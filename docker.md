@@ -77,8 +77,14 @@ RUN apt-get update && apt-get install nginx -y
 COPY file_copy_to_container /tmp/file_copy_to_container
 CMD Bash
 ```
+* o que significa?
+    
+    FROM - Através da imagem ubuntu:16.04
+    RUN  - aplique os comandos, equivalente a digitar no terminal
+    COPY - Copie dados de um diretório ou copie uma pasta para /tmp
+    CMD  - No modo iterativo, por padrão, abrirá o bash
 
-    O -t é o parâmetro para informar o nome da imagem:
+* O -t é o parâmetro para informar o nome da imagem:
 
     docker image build -t nome_da_imagem:versao_da_imagem
     
