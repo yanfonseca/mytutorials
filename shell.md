@@ -331,5 +331,5 @@ function function_name{
 }
 ```
 
-   Like any other languages but with restrictions, of course, Shell has if statments, loops, functions, arrays, associative arrays(they are equivalent form to dictionaries in python, for example). In fact the Terminal window is useful to solve a variaty of problemns and using Shell language it is possible to do more, but it is better to use it in specic cases when it is easyer and more fast than other solutions. I dind't focus in the details about the Shell language and I just learned what was important to solve problems with this different point view. 
+   Like any other languages but with restrictions, of course, Shell has if statments, loops, functions, arrays, associative arrays(they are equivalent form to dictionaries in python, for example). In fact the Terminal window is useful to solve a variaty of problemns and using Shell language it is possible to do more, but it is better to use it in specic cases when it is easier and more fast than other solutions. I dind't focus in the details about the Shell language and I just learned what was important to solve problems with this different point view. 
 
