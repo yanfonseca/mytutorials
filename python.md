@@ -1,8 +1,8 @@
-# Python
+## Python
 
-## Pip
+### Pip
 
-### Comandos básicos
+#### Comandos básicos
       pip --help
 
       pip list
@@ -19,7 +19,7 @@
       sudo apt install python3-pip
       pip3 --version
 
-## Environment
+### Environment
 
 * Instalar a virtualenv
 
