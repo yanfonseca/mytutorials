@@ -244,16 +244,6 @@ echo "the value is $(value)"
  - The tool: https://csvkit.readthedocs.io/en/latest/
  - There are tools to convert csv to other extensions, to manipulate a dataset, to query with sql.
 
-# Pip
-
-### Some observation about pip
-
-- pip --help
-- pip list
-- pip --version
-- pip install -r requirements.txt - requirements is a list of packages.
-- pip install package1 package2.
-
 # Automation with Cron - Installed in Linux distribuitions.
 
 * Cron
