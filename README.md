@@ -7,7 +7,7 @@ You'll see:
 * [Shell](shell.md)
 * [GIT](git_commands.md)
 * [Anaconda](anaconda.md)
-* [REGEX](regex.md)
+* [RegEx](regex.md)
 * [Docker](docker.md)
 * [Python](python.md)
 * [Python - Data Science](python_datasciece.md)
