@@ -9,7 +9,7 @@
     
     touch .gitignore : touch creates empty files, create the file .gitignore
     
-    git checkout -b branchname : It creates a branch. The command `git branch branchname` also create a branch.
+    git checkout -b branchname : It creates a branch. The command *git branch branchname* also create a branch.
     
     git checkout branchname : It changs to branchname.
     
