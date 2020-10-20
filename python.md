@@ -27,7 +27,7 @@
 
 * Instalar a virtualenv dentro de uma pasta
 
-      python3 -m virtualenv nomeDaPasta
+      python3 -m virtualenv nome_da_env
 
 * Como alternativa pode usar a venv
 
@@ -35,7 +35,7 @@
 
 * Para ativar a env 
 
-      source filepath/bin/activate
+      source nome_da_env/bin/activate
 
 * Para desativar a env
 
@@ -43,10 +43,12 @@
   
 ### Env para Machine Learning
 
-    python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
+      python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 
-* Se foi criada a env, como sugerido acima, é necessário registrar ao jupyter e dar um nome
+* Se foi criada a env, como sugerido acima, é necessário fazer o registro:
 
       python3 -m ipykernel install --user --name=python3
 
+* Para ativar o 
+      
       jupyter notebook 
