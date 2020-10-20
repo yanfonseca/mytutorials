@@ -5,8 +5,9 @@
 ### Comandos básicos
       pip --help
 
-            pip list
-                        pip --version
+      pip list
+      
+      pip --version
 
 * Verificar se está instalado
 
