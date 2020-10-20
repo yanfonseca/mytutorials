@@ -1,6 +1,6 @@
 ## Notas do livro Expressões Regulares - Marinho Jargas
 
-## Capítulo 2
+#### Capítulo 2
 
 ### Representantes
 
@@ -117,6 +117,8 @@
 * :-@		Do : até o @ na tabela 
 * A-z		Do A até o z na tabela 
 
-## Capítulo
+#### Capítulo 3
 
-## RegEx no Python
+#### Capítulo x 
+
+### RegEx no Python
