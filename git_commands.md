@@ -7,7 +7,7 @@
     
     git add . : Add all files to staged area.
     
-    touch .gitignore : Create the file .gitignore
+    touch .gitignore : touch creates empty files, create the file .gitignore
     
     git checkout -b branchname : It creates a branch. The command ´git branch branchname´ also create a branch.
     
