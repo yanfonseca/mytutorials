@@ -33,7 +33,7 @@
     
     git log: It shows the log
     
-    git reset --hard origin/master - This command undo everything that you have done in your branch and download everything from origin again. 
+    git reset --hard origin/master - Undo everything that you've done in your branch and download everything from origin again. 
     
     git remote rm <remote-name> : Delete remote. 
     
