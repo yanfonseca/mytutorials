@@ -6,11 +6,11 @@ You'll see:
 
 1. [Shell](shell.md)
 1. [GIT](git_commands.md)
-* [Anaconda](anaconda.md)
-* [RegEx](regex.md)
-* [Docker](docker.md)
-* [Python](python.md)
-* [Python - Data Science](python_datasciece.md)
-* [SQL](sql.md)
+1. [Anaconda](anaconda.md)
+1. [RegEx](regex.md)
+1. [Docker](docker.md)
+1. [Python](python.md)
+1. [Python - Data Science](python_datasciece.md)
+1. [SQL](sql.md)
 
  
