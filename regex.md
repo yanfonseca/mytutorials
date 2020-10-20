@@ -8,7 +8,7 @@
 |:-----:|-----|
 | .   | Um caractere qualquer| 
 | []  | Lista de caracteres permitidos e são literais|  
-|  [^]| Lista de caracteres proibidos |
+|  [^]| Lista de caracteres proibidos(negação) |
 
 ### Quantificadores
 
