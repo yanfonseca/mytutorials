@@ -42,7 +42,7 @@
 | Parâmetros |  Função   |
 |------------|-----------|
 |   -a       | Lista todos os contêineres, em uso ou não |
-| -l        | Lista últimos contaêineres|
+| -l        | Lista últimos contêineres|
 | -n         |Lista os últimos N contêineres, em uso ou não|
 |  -q       | Lista os ids dos contêineres|
 
