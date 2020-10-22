@@ -1,8 +1,8 @@
 # Python for Data Science 
 
-### Zscore
+* Zscore
 
-### Percentual Change
+* Percentual Change
 
 # Statistics
 
@@ -30,6 +30,7 @@ def ecdf(data):
     return x, y
 ```
 ECDF
+
 plt.plot(data, ecdf(data))
 
 Start to see the histogram, than warplot, ECDF.
