@@ -61,6 +61,18 @@
       
       jupyter notebook 
 
+## Ipython
+
+* pip install ipython[notebook]
+
+* python3 manage.py shell
+
+* pip install django-extensions
+
+* python3 manage.py shell_plus --notebook
+abre o notebook com funções do django
+
+
 ## Dicas:
 
 * Bibliotecas que podem ter o que você procura:
