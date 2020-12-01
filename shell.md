@@ -334,6 +334,7 @@ function function_name{
    Like any other languages but with restrictions, of course, Shell has if statments, loops, functions, arrays, associative arrays(they are equivalent form to dictionaries in python, for example). In fact the Terminal window is useful to solve a variaty of problemns and using Shell language it is possible to do more, but it is better to use it in specic cases when it is easier and more fast than other solutions. I dind't focus in the details about the Shell language and I just learned what was important to solve problems with this different point view. 
 
 
+To review
 Obs:
 
 zip -r arquivo.zip pasta
@@ -347,17 +348,15 @@ touch arquivo.txt
 tar -vczf teste2.tar.gz teste
 tar -vxzf teste2.tar.gz 
 
- 
 ps -e
+ps -e | grep program-name
 kill
 jobs
+
 fg id
 bg id
-
 start in background
 program-name &
-
-ps -e | grep program-name
 
 ls -l
 +r or -r
@@ -366,8 +365,30 @@ ls -l
 chmod +x file
 
 locate 
-updatedb
+updatedb - uptade bin
 
+passwd
+adduser username
+chmod -o-rx username - Inside home/
 sudo su
+
+env
+env | grep PATH
+
+The alteration is lost when console is closed
+PATH=$PATH:/home/user/file
+
+it keeps the path configuration
+.bashrc - insede home/user
+PATH=$PATH:/home/user/file
+
+apt-get update
+apt-cache search django
+
+sudo dpkg -i vsftpd-dbg_3.0.3-8+b1_i386.deb 
+sudo dpkg -r vsftpd
+
+ps -ef | grep vsftpd
+sudo service vsftpd stop
 
 
