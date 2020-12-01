@@ -347,5 +347,27 @@ touch arquivo.txt
 tar -vczf teste2.tar.gz teste
 tar -vxzf teste2.tar.gz 
 
+ 
+ps -e
+kill
+jobs
+fg id
+bg id
+
+start in background
+program-name &
+
+ps -e | grep program-name
+
+ls -l
++r or -r
++w or -w
++x or -x
+chmod +x file
+
+locate 
+updatedb
+
+sudo su
 
 
