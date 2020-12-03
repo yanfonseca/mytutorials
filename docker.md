@@ -210,3 +210,13 @@ Versões do docker-compose: https://docs.docker.com/compose/compose-file/#versio
 * stop : Parar todos serviços que estão no docker-compose.yml
 * ps : Lista todos serviços iniciador a partir do docker-compose.yml
 
+```console
+docker ps
+docker container -a
+docker start -a ubuntu
+docker rm
+docker container prune
+
+docker images
+docker rmi hello-world
+```
