@@ -212,6 +212,7 @@ Versões do docker-compose: https://docs.docker.com/compose/compose-file/#versio
 
 ```console
 docker ps
+docker ps -a
 docker container -a
 docker start -a ubuntu
 docker rm
@@ -219,4 +220,15 @@ docker container prune
 
 docker images
 docker rmi hello-world
+
+docker run -d -P --name meu-site dockersamples/static-site
+sudo docker run -d -p 12345:80 dockersamples/static-site
+
+variável de ambiente
+docker run -d -P -e AUTHOR="Yan" dockersamples/static-site
+sudo docker port f405f
+
+docker ps -q
+sudo docker stop $(docker ps -q)
+
 ```
