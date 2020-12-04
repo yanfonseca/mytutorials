@@ -231,4 +231,9 @@ sudo docker port f405f
 docker ps -q
 sudo docker stop $(docker ps -q)
 
+Volumes
+sudo docker run -it -v "/home/yan/docker:/var/www" ubuntu
+
+
+
 ```
