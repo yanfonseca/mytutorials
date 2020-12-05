@@ -234,6 +234,47 @@ sudo docker stop $(docker ps -q)
 Volumes
 sudo docker run -it -v "/home/yan/docker:/var/www" ubuntu
 
+sudo docker run -v "/home/yan/docker:/var/www" -p 8080:3000 -w "/var/www/volume-exemplo" node npm start
 
+sudo docker run -d -v "$(pwd):/var/www" -p 8080:3000 -w "/var/www/volume-exemplo" node npm start
 
+sudo docker inspect 92834
+
+Dockerfile 
+
+também funciona ubuntu.dockerfile   mongo.dockerfile
+
+FROM node:latest
+MAINTAINER Yan Fonseca
+ENV NODE_ENV=production
+ENV PORT=3000
+COPY . /var/www
+WORKDIR /var/www
+RUN npm install
+ENTRYPOINT npm start
+EXPOSE $PORT
+
+docker network ls
+docker network inspect minharede
+
+ sudo docker build -f Dockerfile -t yanf/node . 
+ sudo docker run -d -p 1234:3000 yanf/node
+ 
+ hostname -i
+ apt-get update && apt-get install -y iputils-ping
+ ping 172.17.0.3
+ 
+ criar rede, 
+ 
+ para fazer referencia ao ip,
+ na rede bridge só com o número do ip
+ se criar a própria rede é possível fazer referencia pelo nome 
+ 
+ criar própria rede
+ docker network create --driver bridge minharede
+sudo docker run -it --name containerubuntu --network minharede ubuntu
+
+docker rm -f 324
+
+ 
 ```
