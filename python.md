@@ -81,6 +81,7 @@ abre o notebook com funções do django
 2. collections
 
 ## OO
+```
 class Conta:
     __codigo = 100
 
@@ -104,8 +105,9 @@ class Conta:
     @staticmethod
     def dono():
         return "Brasil"
-
+```
 ## Decorator
+```
 def eleva_ao_quadrado(func):
     def func_decorada(*arg):
         mult = func(*arg)
@@ -119,3 +121,4 @@ def multiplica(*args):
     return reduce((lambda numero_a, numero_b: numero_a * numero_b), args)
 
 print(multiplica(2,3,2))
+```
