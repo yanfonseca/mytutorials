@@ -79,3 +79,43 @@ abre o notebook com funções do django
       
 1. functools
 2. collections
+
+## OO
+class Conta:
+    __codigo = 100
+
+    def __init__(self, nome, saldo):
+        self.__nome = nome
+        self.__saldo = saldo
+        self.__limite = 500
+
+    @property
+    def saldo(self):
+        return self.__saldo
+
+    @property
+    def limite(self):
+        return self.__limite
+
+    @limite.setter
+    def limite(self, limite):
+        self.__limite = limite
+
+    @staticmethod
+    def dono():
+        return "Brasil"
+
+## Decorator
+def eleva_ao_quadrado(func):
+    def func_decorada(*arg):
+        mult = func(*arg)
+        return mult ** 2
+    return func_decorada
+
+from functools import reduce
+
+@eleva_ao_quadrado
+def multiplica(*args):
+    return reduce((lambda numero_a, numero_b: numero_a * numero_b), args)
+
+print(multiplica(2,3,2))
