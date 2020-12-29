@@ -90,6 +90,14 @@ class Conta:
         self.__saldo = saldo
         self.__limite = 500
 
+    def __str__(self):
+        resumo = f"""
+        nome: {self.__nome} 
+        saldo: {self.__saldo} 
+        limite: {self.__limite}
+        """
+        return resumo
+
     @property
     def saldo(self):
         return self.__saldo
@@ -105,6 +113,46 @@ class Conta:
     @staticmethod
     def dono():
         return "Brasil"
+
+class BB(Conta):
+    
+    def __init__(self, nome, saldo, estado):
+        Conta.__init__(self, nome, saldo)
+        self.__estado = estado
+
+    def __str__(self):
+        resumo = f"""
+        nome: {self._Conta__nome} 
+        saldo: {self._Conta__saldo} 
+        limite: {self._Conta__limite}
+        estado: {self.__estado}
+        """
+        return resumo
+        
+
+class Itau(Conta):
+    def __init__(self, nome, saldo, categoria):
+        Conta.__init__(self, nome, saldo)
+        self.__categoria = categoria
+
+    def __str__(self):
+        resumo = f"""
+        nome: {self._Conta__nome} 
+        saldo: {self._Conta__saldo} 
+        limite: {self._Conta__limite}
+        categoria: {self.__categoria}
+        """
+        return resumo
+
+class ContasAbertas():
+    def __init__(self, contas):
+        self.__contas = contas
+
+    def __getitem__(self, item):
+        return self.__contas[item]
+
+    def __len__(self, item):
+        return len(self.__contas)
 ```
 ## Decorator
 ```
