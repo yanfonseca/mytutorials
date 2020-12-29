@@ -153,7 +153,21 @@ class ContasAbertas():
 
     def __len__(self, item):
         return len(self.__contas)
+
 ```
+
+## Abstract class
+
+```
+from collections.abc import MutableSequence
+
+class MinhaListinhaMutavel(MutableSequence):
+    pass
+
+objetoValidado = MinhaListinhaMutavel()
+print(objetoValidado)
+```
+
 ## Decorator
 ```
 def eleva_ao_quadrado(func):
