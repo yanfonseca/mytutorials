@@ -184,3 +184,9 @@ def multiplica(*args):
 
 print(multiplica(2,3,2))
 ```
+
+## Design Pattern
+
+### Strategy
+
+### Chain Responsability
