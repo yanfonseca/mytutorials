@@ -336,83 +336,83 @@ function function_name{
 
 To review
 Obs:
+# Others
 
-zip -r arquivo.zip pasta
+### Zip/Unzip/tar
 
-zip arquivo.zip file.zip
+      zip -r test.zip file
+      zip test.zip file.zip
+      unzip -l file.zip
+      unzip file.zip
 
-unzip -l arquivo.zip
+      tar -vczf teste2.tar.gz teste
+      tar -vxzf teste2.tar.gz 
 
-unzip arquivo.zip
+### Process
 
-touch arquivo.txt 
+      ps -e
+      ps -e | grep program-name
+      kill
+ 
+#### jobs
+   
+      fg id
+      bg id
 
-tar -vczf teste2.tar.gz teste
+##### start in background
 
-tar -vxzf teste2.tar.gz 
+      program-name&
 
-ps -e
+### Mode
 
-ps -e | grep program-name
+      ls -l
 
-kill
+      +r or -r
 
-jobs
+      +w or -w
 
-fg id
+      +x or -x
 
-bg id
+      chmod +x file
 
-start in background
+### More
 
-program-name &
+      locate 
 
-ls -l
+      updatedb - uptade bin
 
-+r or -r
+      passwd
 
-+w or -w
+      adduser username
 
-+x or -x
+      chmod -o-rx username - Inside home/
 
-chmod +x file
+      sudo su
 
-locate 
+      env
 
-updatedb - uptade bin
-
-passwd
-
-adduser username
-
-chmod -o-rx username - Inside home/
-
-sudo su
-
-env
-
-env | grep PATH
+      env | grep PATH
 
 The alteration is lost when console is closed
 
-PATH=$PATH:/home/user/file
+      PATH=$PATH:/home/user/file
 
 it keeps the path configuration
 
-.bashrc - insede home/user
+      .bashrc - insede home/user
 
-PATH=$PATH:/home/user/file
+      PATH=$PATH:/home/user/file
 
-apt-get update
+      apt-get update
 
-apt-cache search django
+      apt-cache search django
 
-sudo dpkg -i vsftpd-dbg_3.0.3-8+b1_i386.deb 
+      sudo dpkg -i vsftpd-dbg_3.0.3-8+b1_i386.deb 
 
-sudo dpkg -r vsftpd
+      sudo dpkg -r vsftpd
 
-ps -ef | grep vsftpd
+      ps -ef | grep vsftpd
 
-sudo service vsftpd stop
+      sudo service vsftpd stop
 
 
