@@ -4,9 +4,10 @@
 
 ### Checking installation
 * which - Used with a program. 
-   - which bash. It prints where bash is installed.
-   - program -v or program --version. It prints the program's version.
-   - program --help or command --help. It prints a quicky help.
+     
+      which bash. It prints where bash is installed.
+      program -v or program --version. It prints the program's version.
+      program --help or command --help. It prints a quicky help.
 
 ### Special characters
       ..     The directory above the one you are in.
