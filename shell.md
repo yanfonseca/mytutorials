@@ -62,96 +62,111 @@
       rm path/filename1.csv path/filename2.csv - Remove files.
 
 * rmdir: *remove directory* - Remove a empty directory.
-    - rmdir name - Remove an empty directory.
-    - rm -r name - Remove a directory.
+    
+      rmdir name - Remove an empty directory.
+      rm -r name - Remove a directory.
    
 * cat : *concatenate*. 
-  - cat *.csv - It concatenates and shows all contents.
-  - cat *.csv | more - It concatenates and shows parts of the content.
-  - cat *.csv | less - It concatenates and shows parts of the content with navigation between files.
-  - cat -n filename.csv - It concatenates file with line numbers.
-  - cat *.csv >> filename.csv - It concatentes and exports to a filename.csv.
-  - cat -e filename.csv - It goes to the end of a file.
+   
+      cat *.csv - It concatenates and shows all contents.
+      cat *.csv | more - It concatenates and shows parts of the content.
+      cat *.csv | less - It concatenates and shows parts of the content with navigation between files.
+      cat -n filename.csv - It concatenates file with line numbers.
+      cat *.csv >> filename.csv - It concatentes and exports to a filename.csv.
+      cat -e filename.csv - It goes to the end of a file.
   
 * paste: Join files horizontally.
-   - paste filename1.csv filename.csv
+      
+      paste filename1.csv filename.csv
  
 * less: It shows just one page. Use :n to go to the next file, :p to go back to the previous one and :q to quit.
-   - less filename1.txt filename2.txt.
+      
+      less filename1.txt filename2.txt.
 
 * more: Old way to see the content of a file.
-   - more filename.txt 
+      
+      more filename.txt 
  
  * head: It shows the first 10 lines.
-    - head filename.txt - First 10 lines.
-    - head -n 2 filename.txt - First two lines.
+      
+         head filename.txt - First 10 lines.
+         head -n 2 filename.txt - First two lines.
  
  * tail: It shows the last 10 lines and it is the opposite of head command.
  
  * cut: It selects columns from a text file.
-    - cut -f 2-5,8 -d , filename.csv - Columns 2 to 5 and 8. The flag -d shows the comma separator. It is obligated to inform the fields with the flag -f.
+    
+         cut -f 2-5,8 -d , filename.csv - Columns 2 to 5 and 8. The flag -d shows the comma separator. It is obligated to inform the fields with the flag -f.
 
 * grep: *general regular expression parser* - It selects lines that contains a text. It accepts REGEX.
     - Common flags: 
-    > -c => Print only a count of selected lines. 
-    -h => It don´t print the name of files. 
-    -i => Not case sensitive. 
-    -l => Print only the name of files that contain matches but not the matches. 
-    -n => Print line numbers. 
-    -v => Only the lines that don't match.
     
-    - grep -v word path/filename.csv - It prints line that don't match.
-    - grep -n -v word path/filename.csv - It prints lines that don't match and the numbers of the lines.
-    - grep i word path/filename1.csv path/filename2.csv - With not sensitive case.
-    - grep '[pc]' filename.txt - REGEX
+            -c => Print only a count of selected lines. 
+            -h => It don´t print the name of files. 
+            -i => Not case sensitive. 
+            -l => Print only the name of files that contain matches but not the matches. 
+            -n => Print line numbers. 
+            -v => Only the lines that don't match.
+    
+            grep -v word path/filename.csv - It prints line that don't match.
+            grep -n -v word path/filename.csv - It prints lines that don't match and the numbers of the lines.
+            grep i word path/filename1.csv path/filename2.csv - With not sensitive case.
+            grep '[pc]' filename.txt - REGEX
  
 * wc: *word count* - It counts the number of characters, words and lines in a file and uses -c, -w and -l.
-      - grep word filename.csv : wc -l - It prints the number of the lines that word searched is find.
+      
+      grep word filename.csv : wc -l - It prints the number of the lines that word searched is find.
 
 * sort: 
-   - sort filename.csv - Ascending alphabetical order.
-   - sort -n filename.csv - Numerically order.
-   - sort -n -r filename.csv - Using -r flag reverse order.
-   - sort -b -n filename.csv - Ignore branks.
+   
+      sort filename.csv - Ascending alphabetical order.
+      sort -n filename.csv - Numerically order.
+      sort -n -r filename.csv - Using -r flag reverse order.
+      sort -b -n filename.csv - Ignore branks.
    
 * uniq: Remove adjacent duplicates. It is like a group by of any programming language but it is necessary to sort the data before it runs this command.
-   - uniq -c filename.csv - Group by unique and count of duplicates.
-   - sort | uniq -c
+   
+      uniq -c filename.csv - Group by unique and count of duplicates.
+      sort | uniq -c
 
 * mkdir - Create a directory
-     - mkdir name
+         
+         mkdir name
 
 ## Flags
 
 #### Commands share flags and it is also possible to combine flags.
 
-* -n : Number of lines.
-* -R : Recursive.
-* -F : Print / after all directories and * after runnable programms.
-* -e : Print the end of a file.
-* -f : Columns from a text file.
-* -d : Separator - ','` ` ';'` ` ':'
+      -n : Number of lines.
+      -R : Recursive.
+      -F : Print / after all directories and * after runnable programms.
+      -e : Print the end of a file.
+      -f : Columns from a text file.
+      -d : Separator - ','` ` ';'` ` ':'
 
 ## Output command in a file
 
 #### By using the shell commands it is possible to export to a new file:
 
 * `>` - it exports to a file.
-   - head -n 5 filename.csv > newfilename.csv - It exports the first five rows to a newfilename.csv
-   - `>` newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
+   
+      head -n 5 filename.csv > newfilename.csv - It exports the first five rows to a newfilename.csv
+      > newfilename.csv head -n 1 filename.csv - It is other way to export data to newfilename.csv
 
 #### Combine commands using pipe
 
  * | - The pipe symbol informs the shell to use the left output as input.
-   - head filename.csv | tail -n 1 - It shows only the 10th row from filename.csv.
+         
+         head filename.csv | tail -n 1 - It shows only the 10th row from filename.csv.
 
 ## Print variable's value
 
 * echo: It prints a value or a variable's value. The character $ is used do access the variable.
-   - echo $OSTYPE - It prints the variable's value.
-   - echo Hello - It prints "Hello".
-   - var=filename.csv - It can't have any space next to `=`.
-   - head -n 3 $var - Access the filename.csv using the variable var.
+   
+      echo $OSTYPE - It prints the variable's value.
+      echo Hello - It prints "Hello".
+      var=filename.csv - It can't have any space next to `=`.
+      head -n 3 $var - Access the filename.csv using the variable var.
 ```
 var_1='Hello'
 var_2='Good'
@@ -159,18 +174,19 @@ echo "It is:" $var_1 $var_2
 ```
 
 * Shell-within-a-shell - Using command date. 
-   - var="The date is `date` - It is possible to show commands with backticks(` `)
-   - var="The date is $(date)" - This way (with parenthesis) is more modern.
+      
+      var="The date is `date` - It is possible to show commands with backticks(` `)
+      var="The date is $(date)" - This way (with parenthesis) is more modern.
    
 * A file.sh can begin with #!/usr/bash in the first line and that code is called shebang. The /usr/bash is the location of Bash.
 
-   - bash script.sh - To run.
-   - ./script.sh - If shebang is mentioned in the first line it is possible use ./filename.extension.
-   - $@ or $* - For access all arguments.
-   - $# - Lenght of arguments.
-   - expr 1 + 4 - This expression returns 5. The expr command used only with integer numbers. 
-   - echo "5 + 7.5" | bc . The program bc, basic calculator, makes possible to run with decimals. 
-   - echo "scale=2; 5/3 " | bc
+      bash script.sh - To run.
+      ./script.sh - If shebang is mentioned in the first line it is possible use ./filename.extension.
+      $@ or $* - For access all arguments.
+      $# - Lenght of arguments.
+      expr 1 + 4 - This expression returns 5. The expr command used only with integer numbers. 
+      echo "5 + 7.5" | bc . The program bc, basic calculator, makes possible to run with decimals. 
+      echo "scale=2; 5/3 " | bc
    
 * Double bracket notation
 ```
@@ -196,59 +212,70 @@ echo "the value is $(value)"
 ## Run commands later
 
 * It is possible write the commands learned before inside a script ended by .sh using some editor and run it.
-   - bash scripname.sh - It does what is inside the script, can be data manipulations or other.
+   
+      bash scripname.sh - It does what is inside the script, can be data manipulations or other.
 
 ### Pass filenames to scripts
 
 * Using dollar sign followed by at-sign means that all command-line arguments are given to script.
-  - bash scriptname.sh \.- It runs scriptiname for each file.
+   
+      bash scriptname.sh \.- It runs scriptiname for each file.
 
 * Process a single argument using $1, $2 to command-line parameters. It is possible pass n numbers of arguments and the first one it will be filename.
-   - cut -d, -f $2 $1 inside the file.sh - Inside file.sh for example.
-   - bash file.sh filename.csv number_columns - $1 is number_columns and $2 is the file
-   - The shell waits forevers for the argument if it isn't informed.
+      
+      cut -d, -f $2 $1 inside the file.sh - Inside file.sh for example.
+      bash file.sh filename.csv number_columns - $1 is number_columns and $2 is the file
+      The shell waits forevers for the argument if it isn't informed.
    
 # Download File
 
 ### Using Client URL present in UNIX OS.
 
 * Flags 
-   - -L Redirect the http url if a 300 error occurs.
-   - -C Resume a previous file transfer.
+      
+      -L Redirect the http url if a 300 error occurs.
+      -C Resume a previous file transfer.
 
 * curl
-   - curl -O http://www.anp.gov.br/images/dadosabertos/precos/200[1-9]-1_CA.csv
-   - curl -O https://site.com/filename.csv - Download and save file with original name.
-   - curl -o newfilename.csv https://site.com/filename
+   
+      curl -O http://www.anp.gov.br/images/dadosabertos/precos/200[1-9]-1_CA.csv
+      curl -O https://site.com/filename.csv - Download and save file with original name.
+      curl -o newfilename.csv https://site.com/filename
    
 * Use wildcard to download multiple files
-   - curl -O https://site.com/*.csv
+      
+      curl -O https://site.com/*.csv
 
 * Using Globbing Parser - filename001.csv, filename002.csv, filename020....filename100.csv
-   - curl -O https://site.com/filename[001-100].csv
-   - curl -O https://site.com/fileame[001-100:10].csv - Increment 10.
+      
+      curl -O https://site.com/filename[001-100].csv
+      curl -O https://site.com/fileame[001-100:10].csv - Increment 10.
    
 ### Using Wget - World Wide Web and get are present in UNIX OS. Various file formats and it's better to multiple file downloads.
 
 * Flags
-   - b - Go to background after startup.
-   - q - Turn off the Wget output.
-   - c - Resume broken dowload.
-   - i - List of urls to download.
+      
+      b - Go to background after startup.
+      q - Turn off the Wget output.
+      c - Resume broken dowload.
+      i - List of urls to download.
    
 * wget
-   - wget -bqc http://site.com/filename.txt
-   - wget [flags] [url]
-   - wget --help
+      
+      wget -bqc http://site.com/filename.txt
+      wget [flags] [url]
+      wget --help
    
 * Multiple file to download with wget
-   - wget -i url_list.txt
-   - wget --limit-rate=300k -i url_list.txt - It limits download in 300k.
-   - wget --wait=3.5 -i url_list.txt - 3.5 seconds between files download.
+      
+      wget -i url_list.txt
+      wget --limit-rate=300k -i url_list.txt - It limits download in 300k.
+      wget --wait=3.5 -i url_list.txt - 3.5 seconds between files download.
 
 * Others
-   - unzip filename.zip
-   - unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
+      
+      unzip filename.zip
+      unzip filename.zip && rm filename.zip - Unzip and delete file. (&& it means and)
    
  * csvkit - This kit has a lot of tools to manipulate data, it is similar to pandas that is used in Python. For now I often use python but can be a useful tool for some specific cases.
  
@@ -258,18 +285,19 @@ echo "the value is $(value)"
 # Automation with Cron - Installed in Linux distribuitions.
 
 * Cron
-   - crontab -l - Verify if exits some cron job.
-   - `* * * * *` - minute, hour, day of month, month, day of week.
-   - echo " * * * * * python filename.py" | crontab 
+      
+      crontab -l - Verify if exits some cron job.
+      * * * * * - minute, hour, day of month, month, day of week.
+      echo " * * * * * python filename.py" | crontab 
   
 # Script anatomy
 
 * Array in Bash - index start at 0.
 
-   - declare -a array
-   - array=(30 40 50) -  Without comma.
-   - echo ${arra[@]} - Returns all.
-   - echo ${#array[@]} - Array's length
+      declare -a array
+      array=(30 40 50) -  Without comma.
+      echo ${arra[@]} - Returns all.
+      echo ${#array[@]} - Array's length
   
 # Loop
 
@@ -304,8 +332,9 @@ done
 * Inside of the block and after *do* is possible to run commands learned before, like: head, cut, grep and others. It is possible to do one manipulation by file or merge all files and after do what is necessary.
 
 * Space in the name of the file causes problems
-   - head 'file name.csv' - It is one file but without quotation marks bash does not understand like one file.
-   - head file name.csv - It will be a problem because file and names.csv are informed like two different files.
+      
+      head 'file name.csv' - It is one file but without quotation marks bash does not understand like one file.
+      head file name.csv - It will be a problem because file and names.csv are informed like two different files.
 
 
 # If statement
@@ -333,8 +362,9 @@ fi
 # Functions
 
 * The variables are global, it is the default mode. To be local add "local" before de var
-   - local var="text"
-   - local var=$1
+      
+      local var="text"
+      local var=$1
 
 ```
 function function_name{
