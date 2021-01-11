@@ -10,44 +10,56 @@
 
 ### Special characters
       ..     The directory above the one you are in.
+      
       .      Current directory.
+      
       ~      Home directory.
 
 ### Wildcards: 
-      `*` : It matches zero or more words or characters.
+      * : It matches zero or more words or characters.
+      
       ? : It matches a single character.
+      
       [0123] - Matches to 0, 1, 2 or 3. It matches any character inside square brackets.
+      
       { } : It matches any of the patterns comma-separeted.
+      
       {*.csv, *.txt} - Matches to files ended by the specification.
 
 ## Commands
 
 * man    : To access the manual's command.
-   - man commandname or man program: It shows comandname's manual.
+
+      man commandname or man program: It shows comandname's manual.
 
 * pwd   : *Print working directory* - It shows where you are in the filesystem.
 
 * history: Print a list of commands used recently.
-    - !command - It will run the recent use of the command.
-    - !2 - It will run the second command from history.
-    - ctrl + R - It helps seach commands that you have used recently.
+
+      !command - It will run the recent use of the command.
+      !2 - It will run the second command from history.
+      ctrl + R - It helps seach commands that you have used recently.
 
 * ls    : *listing* - It lists the contents of your current directory. 
-    - ls .    : The contents of the current directory.
-    - ls path/   : It lists the contents of a path.
-    - ls -R -F: It lists recursively all contents and which is folder or executable.
+      
+      ls .    : The contents of the current directory.
+      ls path/   : It lists the contents of a path.
+      ls -R -F: It lists recursively all contents and which is folder or executable.
     
 * mv    : *move* - Move a file or directory from a directory to another one.
-    - mv path1/filename1.csv path2/filename2.csv    - It Changes the name of a file too. 
-    - mv path/filename1.csv path/filename2.csv path2 - Move files to a new path. 
+    
+      mv path1/filename1.csv path2/filename2.csv    - It Changes the name of a file too. 
+      mv path/filename1.csv path/filename2.csv path2 - Move files to a new path. 
     
 * cp    : *copy* - Copy file.
-    - cp path/filename1.csv path/filename2.csv - Copy and change the name.
-    - cp path/filename1.csv path/filename2.csv path2 - Copy files to a new path. 
-    - cp path1/filename1.csv path2/filename2.csv path3 - Copy files from different paths to a new path.
+      
+      cp path/filename1.csv path/filename2.csv - Copy and change the name.
+      cp path/filename1.csv path/filename2.csv path2 - Copy files to a new path. 
+      cp path1/filename1.csv path2/filename2.csv path3 - Copy files from different paths to a new path.
     
 * rm    : *remove* - Remove files.
-    - rm path/filename1.csv path/filename2.csv - Remove files.
+      
+      rm path/filename1.csv path/filename2.csv - Remove files.
 
 * rmdir: *remove directory* - Remove a empty directory.
     - rmdir name - Remove an empty directory.
