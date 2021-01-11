@@ -1,6 +1,6 @@
 # Introduction to Shell 
 
-   An Introduction to command line, some really good tips that can help you do some specic things using the terminal window. 
+   An Introduction to command line, some really good tips that can help you do some specific things using the terminal window. 
 
 ### Checking installation
 * which - Used with a program. 
@@ -9,17 +9,16 @@
    - program --help or command --help. It prints a quicky help.
 
 ### Special characters
-* ..    : The directory above the one you are in.
-* .     : Current directory.
-* ~     : Home directory.
+      ..     The directory above the one you are in.
+      .      Current directory.
+      ~      Home directory.
 
 ### Wildcards: 
-* `*` : It matches zero or more words or characters.
-* ? : It matches a single character.
-* `[ ]` : It matches any one character inside square brackets.
-   - [0123] - Matches to 0, 1, 2 or 3.
-* { } : It matches any of the patterns comma-separeted.
-   - {*.csv, *.txt} - Matches to files ended by the specification.
+      `*` : It matches zero or more words or characters.
+      ? : It matches a single character.
+      [0123] - Matches to 0, 1, 2 or 3. It matches any character inside square brackets.
+      { } : It matches any of the patterns comma-separeted.
+      {*.csv, *.txt} - Matches to files ended by the specification.
 
 ## Commands
 
