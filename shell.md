@@ -25,7 +25,7 @@
       
       { } : It matches any of the patterns comma-separeted.
       
-      {*.csv, *.txt} - Matches to files ended by the specification.
+      {*.csv,*.txt} - Matches to files ended by the specification.
 
 ## Commands
 
