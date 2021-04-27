@@ -17,7 +17,7 @@
       ~      Home directory.
 
 ### Wildcards: 
-      * : It matches zero, more words and characters.
+      * : It matches words or characters.
       
       ? : It matches a single character.
       
