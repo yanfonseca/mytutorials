@@ -12,5 +12,5 @@ You'll see:
 1. [Python](python.md)
 1. [Python - Data Science](python_datascience.md)
 1. [SQL](sql.md)
-
+1. [Azure](azure.md)  
  
